@@ -1,16 +1,10 @@
 import styled from 'styled-components'
-import Home from './sections/home'
-import Header from './sections/header'
-import About from './sections/about'
-import Projects from './sections/projects'
+import Routes from './routes'
 
 const App = () => {
   return (
     <PageContent>
-      <Header />
-      <Home />
-      <About />
-      <Projects />
+      <Routes />
     </PageContent>
   )
 }

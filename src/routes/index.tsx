@@ -4,7 +4,7 @@ import {
   Route,
   Routes as Routering
 } from 'react-router-dom'
-import App from '../../App'
+import App from '../App'
 
 const Routes = () => {
   return (

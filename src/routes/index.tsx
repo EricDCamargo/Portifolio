@@ -4,14 +4,15 @@ import {
   Route,
   Routes as Routering
 } from 'react-router-dom'
-import App from '../App'
+
+import Home from '../pages/home'
 
 const Routes = () => {
   return (
     <BrowserRouter>
       <Routering>
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<Home />} />
       </Routering>
     </BrowserRouter>
   )

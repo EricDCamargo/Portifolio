@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import '@themes/global.styles.css'
 import Routes from './routes'
 
 const App = () => {

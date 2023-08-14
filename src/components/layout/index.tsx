@@ -1,6 +1,7 @@
 import { colors } from '@src/shared/themes/colors'
 import { ReactNode } from 'react'
 import styled from 'styled-components'
+import { NavBar } from '../navBar'
 
 type TemplateProps = {
   children: ReactNode
@@ -9,7 +10,7 @@ type TemplateProps = {
 export const Template = ({ children }: TemplateProps) => {
   return (
     <Grid>
-      {/* <NavBar /> */}
+      <NavBar />
       <Content>{children}</Content>
     </Grid>
   )

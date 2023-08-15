@@ -1,19 +1,10 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  Routes as Routering
-} from 'react-router-dom'
-
-import Home from '../pages/home'
+import { BrowserRouter } from 'react-router-dom'
+import AppRoutes from './routes'
 
 const Routes = () => {
   return (
     <BrowserRouter>
-      <Routering>
-        <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/" element={<Home />} />
-      </Routering>
+      <AppRoutes />
     </BrowserRouter>
   )
 }

@@ -1,3 +1,8 @@
 {
-  "homePT": {}
+  "homePT": {
+    "about": "Sobre",
+    "home": "Home",
+    "skills": "Habilidades",
+    "contact": "Contato"
+  }
 }

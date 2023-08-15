@@ -3,17 +3,21 @@ import { FaWolfPackBattalion } from 'react-icons/fa'
 
 const MainSection = () => {
   return (
-    <HeaderConteiner>
+    <Container id="home">
       <FaWolfPackBattalion size={130} color={'#fff'} />
-    </HeaderConteiner>
+    </Container>
   )
 }
 
 export default MainSection
 
-const HeaderConteiner = styled.div`
-  width: 100%;
-  height: 15%;
+const Container = styled.div`
   display: flex;
-  background-color: #292929;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  padding: 0px 0px 0px 60px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `

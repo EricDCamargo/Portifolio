@@ -23,38 +23,38 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <AnchorA
+      <Section
         onClick={e => {
           smoothScroll(e, 'home')
           setIsMenuOpen(false)
         }}
       >
         {t('home:home')}
-      </AnchorA>
-      <AnchorA
+      </Section>
+      <Section
         onClick={e => {
           smoothScroll(e, 'about')
           setIsMenuOpen(false)
         }}
       >
         {t('home:about')}
-      </AnchorA>
-      <AnchorA
+      </Section>
+      <Section
         onClick={e => {
           smoothScroll(e, 'skills')
           setIsMenuOpen(false)
         }}
       >
         {t('home:skills')}
-      </AnchorA>
-      <AnchorA
+      </Section>
+      <Section
         onClick={e => {
           smoothScroll(e, 'contact')
           setIsMenuOpen(false)
         }}
       >
         {t('home:contact')}
-      </AnchorA>{' '}
+      </Section>{' '}
       <Icons>
         <a href="https://contate.me/eric-camargo" target="_blank">
           <SiWhatsapp size={18} className="icon iconWpp" />
@@ -96,7 +96,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   )
 }
 
-const AnchorA = styled.a`
+const Section = styled.a`
   text-decoration: none;
   color: ${colors.white};
   transition: 0.5s;

@@ -1,11 +1,11 @@
-import { homeEN } from './en/home.json'
-import { homePT } from './pt-BR/home.json'
+import { homeEN } from "./en/home.json";
+import { homePT } from "./pt-BR/home.json";
 
 export const resources = {
   en: {
-    home: homeEN
+    home: homeEN,
   },
-  'pt-BR': {
-    home: homePT
-  }
-}
+  "pt-BR": {
+    home: homePT,
+  },
+};

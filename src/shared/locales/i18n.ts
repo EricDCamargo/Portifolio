@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .init({
     supportedLngs: ['ptBR', 'en'],
-    fallbackLng: 'pt-BR',
+    fallbackLng: 'ptBR',
     resources: resources,
     detection: {
       order: ['path', 'localStorage', 'cookie', 'htmlTag', 'subdomain'],

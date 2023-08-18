@@ -67,8 +67,8 @@ export const NavBar = () => {
           </a>
           <img
             onClick={() => {
-              i18n.changeLanguage('pt-BR')
-              changeAppLanguage('pt-BR')
+              i18n.changeLanguage('ptBR')
+              changeAppLanguage('ptBR')
             }}
             className="flag"
             src={brazil}

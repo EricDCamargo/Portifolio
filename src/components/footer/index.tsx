@@ -12,7 +12,7 @@ export const Footer = () => {
     <Content>
       <BiCopyright color={colors.white} />
       <p>Copyright - Eric Dellai Camargo - All rights reserved</p>
-      <img src={i18n.language === 'pt-BR' ? brazil : usa} alt="Country flag" />
+      <img src={i18n.language === 'ptBR' ? brazil : usa} alt="Country flag" />
     </Content>
   )
 }

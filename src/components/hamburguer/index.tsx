@@ -11,7 +11,7 @@ interface Props {
 }
 
 export const Hamburguer = ({ setIsMenuOpen }: Props) => {
-  const gmail = 'custodio.viscaino@gmail.com'
+  const gmail = 'ericdcamargo@gmail.com'
 
   const handleGmailIconClick = async () => {
     return (window.location.href = `mailto:${gmail}`)
@@ -23,38 +23,38 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <Section
+      <AnchorA
         onClick={e => {
           smoothScroll(e, 'home')
           setIsMenuOpen(false)
         }}
       >
         {t('home:home')}
-      </Section>
-      <Section
+      </AnchorA>
+      <AnchorA
         onClick={e => {
           smoothScroll(e, 'about')
           setIsMenuOpen(false)
         }}
       >
         {t('home:about')}
-      </Section>
-      <Section
+      </AnchorA>
+      <AnchorA
         onClick={e => {
           smoothScroll(e, 'skills')
           setIsMenuOpen(false)
         }}
       >
         {t('home:skills')}
-      </Section>
-      <Section
+      </AnchorA>
+      <AnchorA
         onClick={e => {
           smoothScroll(e, 'contact')
           setIsMenuOpen(false)
         }}
       >
         {t('home:contact')}
-      </Section>{' '}
+      </AnchorA>{' '}
       <Icons>
         <a href="https://contate.me/eric-camargo" target="_blank">
           <SiWhatsapp size={18} className="icon iconWpp" />
@@ -96,7 +96,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   )
 }
 
-const Section = styled.a`
+const AnchorA = styled.a`
   text-decoration: none;
   color: ${colors.white};
   transition: 0.5s;

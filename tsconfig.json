@@ -2,9 +2,6 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "allowImportingTsExtensions": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
@@ -17,7 +14,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
     "paths": {
       "@src/*": ["./src/*"],

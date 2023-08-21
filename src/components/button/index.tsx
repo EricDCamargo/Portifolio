@@ -21,7 +21,6 @@ const ButtonConteiner = styled.a`
   position: relative;
   font-size: 17px;
   background: linear-gradient(45deg, red, blue);
-
   border: none;
   color: #fff;
   cursor: pointer;

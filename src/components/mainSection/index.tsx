@@ -20,7 +20,9 @@ const MainSection = () => {
           </ButtonArea>
         </div>
       </ApresentationContainer>
-      <img className="wolf" src={wolf} alt="Wolf" />
+      <WolfConteiner>
+        <img className="wolf" src={wolf} alt="Wolf" />
+      </WolfConteiner>
     </Container>
   )
 }
@@ -35,7 +37,7 @@ const Container = styled.div`
   width: 100%;
   padding: 100px 0px 0px 60px;
   @media (max-width: 769px) {
-    padding: 0;
+    padding: 100px 0px 0px 30px;
     flex-direction: column;
   }
 
@@ -66,19 +68,6 @@ const Container = styled.div`
       font-size: 30px;
     }
   }
-  .wolf {
-    position: absolute;
-    width: 880px;
-    height: 760px;
-    display: flex;
-    right: 0;
-    top: 30px;
-    @media (max-width: 425px) {
-      position: absolute;
-      left: -50%;
-      right: -50%;
-    }
-  }
 `
 
 const ApresentationContainer = styled.div`
@@ -96,5 +85,20 @@ const ButtonArea = styled.div`
   padding-top: 10px;
   :hover {
     box-shadow: 0px 0px 10px 2px #e74c3c;
+  }
+`
+
+const WolfConteiner = styled.div`
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: end;
+  @media (max-width: 425px) {
+    justify-content: center;
+  }
+  .wolf {
+    width: 880px;
+    height: 760px;
+    display: flex;
   }
 `

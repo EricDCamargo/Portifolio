@@ -23,38 +23,18 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <AnchorA
-        onClick={e => {
-          smoothScroll(e, 'home')
-          setIsMenuOpen(false)
-        }}
-      >
+      <Section onClick={e => smoothScroll(e, 'home')}>
         {t('home:home')}
-      </AnchorA>
-      <AnchorA
-        onClick={e => {
-          smoothScroll(e, 'about')
-          setIsMenuOpen(false)
-        }}
-      >
+        </Section>
+      <Section onClick={e => smoothScroll(e, 'about')}>
         {t('home:about')}
-      </AnchorA>
-      <AnchorA
-        onClick={e => {
-          smoothScroll(e, 'skills')
-          setIsMenuOpen(false)
-        }}
-      >
+      </Section>
+      <Section onClick={e => smoothScroll(e, 'skills')}>
         {t('home:skills')}
-      </AnchorA>
-      <AnchorA
-        onClick={e => {
-          smoothScroll(e, 'contact')
-          setIsMenuOpen(false)
-        }}
-      >
+      </Section>
+      <Section onClick={e => smoothScroll(e, 'contact')}>
         {t('home:contact')}
-      </AnchorA>{' '}
+      </Section>
       <Icons>
         <a href="https://contate.me/eric-camargo" target="_blank">
           <SiWhatsapp size={18} className="icon iconWpp" />
@@ -74,8 +54,8 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
       <Icons>
         <img
           onClick={() => {
-            i18n.changeLanguage('pt-BR')
-            changeAppLanguage('pt-BR')
+            i18n.changeLanguage('ptBR')
+            changeAppLanguage('ptBR')
           }}
           className="languageSelector"
           src={brazil}
@@ -96,12 +76,11 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   )
 }
 
-const AnchorA = styled.a`
+const Section = styled.a`
   text-decoration: none;
   color: ${colors.white};
   transition: 0.5s;
   cursor: pointer;
-
   :hover {
     color: ${colors.primary};
     transform: scale(1.1);

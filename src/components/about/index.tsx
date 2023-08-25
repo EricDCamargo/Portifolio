@@ -1,13 +1,27 @@
 import { SVGs } from '@src/assets'
 import { colors } from '@src/shared/themes/colors'
 import { styled } from 'styled-components'
+import { useState } from 'react'
+import { PersonalInfo } from './information'
 
 const About = () => {
   const { profilePhoto } = SVGs
+  const [activeTopc, setActiveTopc] = useState<string>('Experience')
+  console.log(activeTopc)
   return (
     <Container id="about">
       <ProfilePhoto url={profilePhoto} />
       <TextArea>
+        <div>
+          <h1>About me</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+            quaerat est et provident facere molestiae voluptas adipisci nostrum
+            corrupti inventore natus praesentium, perferendis voluptate error
+            aperiam laborum dolore numquam dolores?
+          </p>
+        </div>
+        <PersonalInfo currentTab={activeTopc} onClick={setActiveTopc} />
       </TextArea>
     </Container>
   )
@@ -20,7 +34,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   column-gap: 50px;
   z-index: 1;
-  justify-content: space-around;
+
   align-items: center;
   background-color: ${colors.softBlack};
   width: 100%;
@@ -62,10 +76,12 @@ const ProfilePhoto = styled.div<{ url: string }>`
 const TextArea = styled.div`
   display: flex;
   flex-direction: column;
+  font-size: small;
   min-width: 40%;
   width: 40%;
-  justify-content: center;
+  height: 100%;
   color: ${colors.white};
+  border: 1px solid red;
   @media (max-width: 1000px) {
     width: 100%;
   }

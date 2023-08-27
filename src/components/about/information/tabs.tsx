@@ -5,7 +5,7 @@ interface PersonalInfoProps {
   currentTab: string
 }
 
-export const PersonalInfo = ({ onClick, currentTab }: PersonalInfoProps) => {
+export const InfoTabs = ({ onClick, currentTab }: PersonalInfoProps) => {
   return (
     <TopcsConteiner>
       <Tab
@@ -33,16 +33,12 @@ export const PersonalInfo = ({ onClick, currentTab }: PersonalInfoProps) => {
 const TopcsConteiner = styled.div`
   display: flex;
   margin: 20px 0 40px;
-  .topc-link {
-    margin: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    position: relative;
+  gap: 50px;
+  @media (max-width: 425px) {
+    gap: 20px;
   }
 `
 const Tab = styled.div<{ isActive: boolean }>`
-  margin: 10px 50px;
   font-size: 18px;
   font-weight: 500;
   cursor: pointer;

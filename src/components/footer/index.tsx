@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { SVGs } from '@src/assets'
 import { useTranslation } from 'react-i18next'
 import { BiCopyright } from 'react-icons/bi'
+import { t } from 'i18next'
 
 export const Footer = () => {
   const { brazil, usa } = SVGs
@@ -11,7 +12,7 @@ export const Footer = () => {
   return (
     <Content>
       <BiCopyright color={colors.white} />
-      <p>Copyright - Eric Dellai Camargo - All rights reserved</p>
+      <p>Copyright - Eric Dellai Camargo - {t('home:rightsReserved')}</p>
       <img src={i18n.language === 'ptBR' ? brazil : usa} alt="Country flag" />
     </Content>
   )

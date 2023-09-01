@@ -1,10 +1,41 @@
 import { colors } from '@src/shared/themes/colors'
-import { styled } from 'styled-components'
+import { useTranslation } from 'react-i18next'
+import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
+import styled from 'styled-components'
 
 const Contact = () => {
+  const { wppColor, linkedin, gmail } = colors
+  const email = 'ericdcamargo@gmail.com'
+
+  const handleGmailIconClick = async () => {
+    return (window.location.href = `mailto:${email}`)
+  }
+  const { t } = useTranslation()
   return (
     <Container id="contact">
-      <h1>Contact</h1>
+      <h2>{t('home:contactWay')}</h2>
+      <p className="paragraph">{t('home:contactDesc')}</p>
+      <ContactWay>
+        <DataCard hover={wppColor} href="https://contate.me/eric-camargo">
+          <SiWhatsapp />
+          <p>(15) 997284066</p>
+        </DataCard>
+        <DataCard
+          hover={linkedin}
+          href="https://www.linkedin.com/in/ericdellaicamargo/"
+        >
+          <SiLinkedin />
+          <p>Eric Camargo</p>
+        </DataCard>
+        <DataCard href="https://www.instagram.com/dellaicamargo/">
+          <SiInstagram className="gradient" />
+          <p className="insta">@dellaicamargo</p>
+        </DataCard>
+        <DataCard onClick={handleGmailIconClick} hover={gmail}>
+          <SiGmail />
+          <p>ericdcamargo</p>
+        </DataCard>
+      </ContactWay>
     </Container>
   )
 }
@@ -20,4 +51,65 @@ const Container = styled.div`
   padding: 20px;
   background-color: ${colors.black};
   z-index: 1;
+
+  h2 {
+    color: ${colors.white};
+  }
+
+  .paragraph {
+    color: ${colors.white};
+    text-align: center;
+    margin-bottom: 30px;
+  }
+`
+const ContactWay = styled.section`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+`
+
+const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0 10px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 50px;
+  color: ${colors.white};
+  background: ${colors.softBlack};
+  cursor: pointer;
+
+  :hover {
+    color: ${({ hover }) => hover};
+
+    .gradient {
+      color: #fd5949;
+    }
+
+    .insta {
+      background-color: red;
+      background-image: radial-gradient(
+        circle at 30% 107%,
+        #fdf497 0%,
+        #fdf497 5%,
+        #fd5949 45%,
+        #d6249f 60%,
+        #285aeb 90%
+      );
+
+      background-size: 100%;
+      background-repeat: repeat;
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+  }
 `

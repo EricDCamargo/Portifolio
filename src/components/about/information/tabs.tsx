@@ -1,3 +1,4 @@
+import { t } from 'i18next'
 import { styled } from 'styled-components'
 
 interface PersonalInfoProps {
@@ -12,19 +13,19 @@ export const InfoTabs = ({ onClick, currentTab }: PersonalInfoProps) => {
         isActive={currentTab == 'Experience' && true}
         onClick={() => onClick('Experience')}
       >
-        Experience
+        {t('home:experience')}
       </Tab>
       <Tab
         isActive={currentTab == 'Graduations' && true}
         onClick={() => onClick('Graduations')}
       >
-        Graduations
+        {t('home:graduations')}
       </Tab>
       <Tab
         isActive={currentTab == 'Skills' && true}
         onClick={() => onClick('Skills')}
       >
-        Skills
+        {t('home:skills')}
       </Tab>
     </TopcsConteiner>
   )

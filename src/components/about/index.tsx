@@ -7,10 +7,13 @@ import { TabContent } from './information/content'
 import Lottie, { Options } from 'react-lottie'
 import wolfAnimation from '@assets/animations/wolfAnimation.json'
 import useWindowSize from '@src/shared/hooks/getWindowSize'
+import { useTranslation } from 'react-i18next'
+import { ageCalc } from '@src/shared/utils/functions'
 
 const About = () => {
   const { profilePhoto } = SVGs
   const size = useWindowSize()
+  const { t } = useTranslation()
   const [activeTopc, setActiveTopc] = useState<string>('Experience')
 
   interface ExperienceItem {
@@ -26,20 +29,19 @@ const About = () => {
 
   const data: MockData = {
     Experience: [
-      { item: 'Software Engineer at Company A', description: '2022' },
-      { item: 'Web Developer at Company B', description: '2022' },
-      { item: 'Internship at Company C', description: '2022' }
+      { item: t('home:ExperienceI'), description: '2023' },
+      { item: t('home:ExperienceII'), description: '2023' },
+      { item: t('home:ExperienceIII'), description: '2020' }
     ],
     Graduations: [
-      { item: "Bachelor's Degree in Computer Science", description: '2022' },
-      { item: "Master's Degree in Software Engineering", description: '2022' }
+      { item: t('home:GraduationI'), description: '2022' },
+      { item: t('home:GraduationII'), description: '2020' },
+      { item: t('home:GraduationIII'), description: '2023' }
     ],
     Skills: [
-      { item: 'JavaScript', description: '2022' },
-      { item: 'React', description: '2022' },
-      { item: 'Node.js', description: '2022' },
-      { item: 'HTML/CSS', description: '2022' },
-      { item: 'Problem Solving', description: '2022' }
+      { item: 'React', description: t('home:reactLevel') },
+      { item: 'Node.js', description: t('home:nodeLevel') },
+      { item: 'HTML/CSS', description: t('home:htmlCssLevel') }
     ]
   }
 
@@ -57,12 +59,12 @@ const About = () => {
       <ProfilePhoto url={profilePhoto} />
       <TextArea>
         <div>
-          <h1>About me</h1>
+          <h1>{t('home:about')}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
-            quaerat est et provident facere molestiae voluptas adipisci nostrum
-            corrupti inventore natus praesentium, perferendis voluptate error
-            aperiam laborum dolore numquam dolores?
+            {t('home:resume')}
+            {ageCalc()}
+            &nbsp;
+            {t('home:yearsOld')}
           </p>
         </div>
         <InfoTabs currentTab={activeTopc} onClick={setActiveTopc} />
@@ -117,7 +119,7 @@ const ProfilePhoto = styled.div<{ url: string }>`
   background-size: cover;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
-  
+
   @media (min-width: 300px) and (max-width: 1000px) {
     width: 300px;
     height: 300px;

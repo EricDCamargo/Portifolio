@@ -2,12 +2,25 @@
   "homeEN": {
     "about": "About",
     "home": "Home",
-    "skills": "Skills",
     "contact": "Contact",
     "SoftwareDeveloper": "Software Developer",
     "contactMe": "Contact Me",
     "contactWay": "Ways To Contact Me",
+    "yearsOld": "years old.",
     "contactDesc": "Did you like my profile and want to get to know me better? Get in touch via email or social networks!",
-    "rightsReserved": "All rights reserved"
+    "resume": "Hi, my name is Eric Dellai Camargo I live in Salto - SP, and I have ",
+    "rightsReserved": "All rights reserved",
+    "experience": "Experience",
+    "graduations": "Graduation",
+    "skills": "Skills",
+    "ExperienceI": "Epiousion IT - Junior Software Developer",
+    "ExperienceII": "Epiousion IT - Apprentice Software Developer at Epiousion IT",
+    "ExperienceIII": "Inttercom ATM Services - IT Technician",
+    "GraduationI": " Fatec - Higher Technology Course (CST), Systems Analysis and Development",
+    "GraduationIII": "Microcamp - Technical Course , English Language and English Language Literatures Resumen",
+    "GraduationII": "Udemy - The Ultimate React Course 2023: React, Redux & More - Udemy",
+    "reactLevel": "Advanced",
+    "nodeLevel": "intermediary",
+    "htmlCssLevel": "Advanced"
   }
 }

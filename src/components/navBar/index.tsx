@@ -28,15 +28,12 @@ export const NavBar = () => {
     <Container>
       <Logo>
         <LogoTitle size={35} color={colors.white}>
-          <BsChevronDoubleLeft />
-          Eric Dellai
+          Eric
         </LogoTitle>
-        <LogoTitle size={35} color={colors.white}>
-          <BsChevronDoubleRight />
-        </LogoTitle>
+        <LogoTitle size={35} color={colors.primary}>.dev</LogoTitle>
       </Logo>
       <Sections>
-      <Section onClick={e => smoothScroll(e, 'home')}>
+        <Section onClick={e => smoothScroll(e, 'home')}>
           {t('home:home')}
         </Section>
         <Section onClick={e => smoothScroll(e, 'about')}>

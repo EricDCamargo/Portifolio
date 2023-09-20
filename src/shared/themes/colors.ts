@@ -1,5 +1,6 @@
 export interface ColorsType {
   primary: string
+  purple: string
   white: string
   black: string
   softBlack: string
@@ -10,6 +11,7 @@ export interface ColorsType {
 
 export const colors: ColorsType = {
   primary: '#2EC4B6',
+  purple: '#6932f5',
   white: '#FFF',
   black: '#1C1C1F',
   softBlack: '#1F2023',

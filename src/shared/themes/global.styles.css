@@ -2,15 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
+  text-decoration: none;
+  list-style: none;
   ::-webkit-scrollbar {
     opacity: 0;
   }
 }
 
 body {
-  font-family: "Preahvihear", sans-serif;
-
+  font-family: 'Preahvihear', sans-serif;
 }
 
 body,
@@ -21,6 +21,7 @@ textarea {
 }
 
 html {
+  scroll-behavior: smooth;
   @media (max-width: 1080px) {
     font-size: 93.75%;
   }

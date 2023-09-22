@@ -42,6 +42,6 @@ const Content = styled.div`
   grid-auto-flow: row;
   grid-auto-rows: 25%;
   grid-template-rows: unset;
-  overflow: auto;
+  overflow: hidden;
   grid-template-columns: unset;
 `

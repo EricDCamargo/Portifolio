@@ -103,8 +103,8 @@ const Container = styled.div`
     row-gap: 50px;
   }
 
-  @media (max-width: 300px) {
-    padding: 0px;
+  @media (max-width: 375px) {
+    padding: 10px 15px;
   }
 `
 

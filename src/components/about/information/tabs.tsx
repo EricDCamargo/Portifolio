@@ -38,6 +38,9 @@ const TopcsConteiner = styled.div`
   @media (max-width: 425px) {
     gap: 20px;
   }
+  @media (max-width: 375px) {
+    gap: 13px;
+  }
 `
 const Tab = styled.div<{ isActive: boolean }>`
   font-size: 18px;
@@ -47,4 +50,7 @@ const Tab = styled.div<{ isActive: boolean }>`
   transition: 0ms.1s;
   border-bottom: 2px solid
     ${props => (props.isActive ? '#ff004f' : 'transparent')};
+  @media (max-width: 425px) {
+    font-size: 15px;
+  }
 `

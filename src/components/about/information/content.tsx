@@ -24,7 +24,7 @@ export const TabContent = ({ currentTab, currentArrays }: TabContentProps) => {
           <div className="description">
             {icon} {item.description}
           </div>
-          {item.item}
+          <p className="item">{item.item}</p>
         </Item>
       ))}
     </Conteiner>
@@ -33,8 +33,15 @@ export const TabContent = ({ currentTab, currentArrays }: TabContentProps) => {
 const Conteiner = styled.div`
   width: 100%;
   height: 100%;
+
+  @media (max-width: 425px) {
+    min-height: 200px;
+  }
 `
 const Item = styled.div`
+  .item {
+    font-size: 11px;
+  }
   .description {
     color: #ff004f;
   }

@@ -1,22 +1,31 @@
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 import { SVGs } from '@src/assets'
-import { Options } from 'react-lottie'
-import useWindowSize from '@src/shared/hooks/getWindowSize'
 import Resume from '@src/shared/assets/Eric Dellai Camargo.pdf'
-import { keyframes } from 'styled-components'
 import { colors } from '@src/shared/themes/colors'
 import { smoothScroll } from '@src/shared/utils/functions'
 import { fontSize } from '@src/shared/themes/fonts'
+import { useEffect } from 'react'
+import ScrollReveal from 'scrollreveal'
 
 const MainSection = () => {
   const { t } = useTranslation()
-  const size = useWindowSize()
-  const { gitHubIcon, linkedinIcon, wolf, photoWithoutBack } = SVGs
+  const { gitHubIcon, linkedinIcon, photoWithoutBack } = SVGs
 
-  const handleCalcSize = () => {
-    return size.width * 0.9
-  }
+  useEffect(() => {
+    const sr = ScrollReveal({
+      distance: '40px',
+      duration: 2500,
+      reset: true
+    })
+
+    sr.reveal('.home-text span', { delay: 350, origin: 'top' })
+    sr.reveal('.home-text h1', { delay: 450, origin: 'left' })
+    sr.reveal('.home-text p', { delay: 620, origin: 'right' })
+    sr.reveal('.main-bnt', { delay: 610, origin: 'left' })
+    sr.reveal('.share', { delay: 720, origin: 'bottom' })
+    sr.reveal('.home-img', { delay: 750, origin: 'right' })
+  }, [])
 
   const handleResumeDownload = () => {
     const link = document.createElement('a')
@@ -29,7 +38,7 @@ const MainSection = () => {
   return (
     <Container id="home">
       <section className="home">
-        <HomeText>
+        <HomeText className="home-text">
           <span>Software Developer</span>
           <h1>Eric Dellai Camargo</h1>
           <p>
@@ -37,7 +46,7 @@ const MainSection = () => {
             Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meu
             trabalho.
           </p>
-          <MainButton>
+          <MainButton className="main-bnt">
             <div onClick={() => handleResumeDownload()} className="bnt">
               Baixar CV
             </div>
@@ -47,7 +56,7 @@ const MainSection = () => {
           </MainButton>
         </HomeText>
 
-        <Share>
+        <Share className="share">
           <p>Minhas redes:</p>
           <Social id="about-me">
             <a
@@ -62,8 +71,8 @@ const MainSection = () => {
           </Social>
         </Share>
       </section>
-      <HomeImage>
-        <img src={photoWithoutBack} alt="" />
+      <HomeImage className="home-img">
+        <img src={photoWithoutBack} />
       </HomeImage>
     </Container>
   )

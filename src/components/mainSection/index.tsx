@@ -90,15 +90,6 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column-reverse;
-    margin-top: 240px;
-  }
-
-  @media (max-width: 800px) {
-    margin-top: 120px;
-  }
-
-  @media (max-width: 390px) {
-    margin-top: 130px;
   }
 `
 

@@ -21,6 +21,10 @@
     "GraduationII": "Udemy - The Ultimate React Course 2023: React, Redux & More - Udemy",
     "reactLevel": "Advanced",
     "nodeLevel": "intermediary",
-    "htmlCssLevel": "Advanced"
+    "htmlCssLevel": "Advanced",
+    "introduction": "Hello, welcome! I am 19 years old, a junior full-stack developer, and I live in São Paulo. Feel free to get to know my work better.",
+    "DownloadCV": "Download CV",
+    "MyProjects": "My projects",
+    "MyNetwork": "My networks"
   }
 }

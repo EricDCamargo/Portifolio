@@ -21,6 +21,10 @@
     "GraduationIII": "Udemy - O curso Ultimate React 2023: React, Redux e mais",
     "reactLevel": "Avançado",
     "nodeLevel": "Intermediario",
-    "htmlCssLevel": "Avançado"
+    "htmlCssLevel": "Avançado",
+    "introduction": "Olá, seja bem-vindo(a)! Tenho 19 anos, sou desenvolvedor full-stack Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meutrabalho.",
+    "DownloadCV": "Baixar CV",
+    "MyProjects": "Meus projetos",
+    "MyNetwork": "Minhas redes"
   }
 }

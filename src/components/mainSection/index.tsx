@@ -39,25 +39,21 @@ const MainSection = () => {
     <Container id="home">
       <section className="home">
         <HomeText className="home-text">
-          <span>Software Developer</span>
+          <span>{t('home:SoftwareDeveloper')}</span>
           <h1>Eric Dellai Camargo</h1>
-          <p>
-            Olá, seja bem-vindo(a)! Tenho 19 anos, sou desenvolvedor full-stack
-            Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meu
-            trabalho.
-          </p>
+          <p>{t('home:introduction')}</p>
           <MainButton className="main-bnt">
             <div onClick={() => handleResumeDownload()} className="bnt">
-              Baixar CV
+              {t('home:DownloadCV')}
             </div>
             <div onClick={e => smoothScroll(e, 'projects')} className="bnt two">
-              Meus projetos
+              {t('home:MyProjects')}
             </div>
           </MainButton>
         </HomeText>
 
         <Share className="share">
-          <p>Minhas redes:</p>
+          <p>{t('home:MyNetwork')}:</p>
           <Social id="about-me">
             <a
               href="https://www.linkedin.com/in/ericdellaicamargo/"
@@ -90,6 +86,7 @@ const Container = styled.div`
 
   @media (max-width: 800px) {
     flex-direction: column-reverse;
+    height: fit-content;
   }
 `
 
@@ -174,7 +171,7 @@ const HomeText = styled.div`
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 3.4rem;
     margin: 15px 0px 10px 0px;
   }
 
@@ -185,11 +182,12 @@ const HomeText = styled.div`
     line-height: 30px;
     margin-bottom: 30px;
     width: 600px;
+    min-height: 90px;
   }
 
   @media screen and (max-width: 1100px) {
     h1 {
-      font-size: 3.8rem;
+      font-size: 3.2rem;
     }
 
     p {
@@ -250,6 +248,7 @@ const HomeText = styled.div`
     margin-left: 10px;
     p {
       width: 370px;
+      min-height: 120px;
     }
   }
   @media screen and (max-width: 390px) {

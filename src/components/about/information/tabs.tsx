@@ -35,7 +35,7 @@ const TopcsConteiner = styled.div`
   display: flex;
   margin: 20px 0 40px;
   gap: 50px;
-  @media (max-width: 425px) {
+  @media (max-width: 450px) {
     gap: 20px;
   }
   @media (max-width: 375px) {

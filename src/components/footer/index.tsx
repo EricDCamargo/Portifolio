@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { BiCopyright } from 'react-icons/bi'
 import { t } from 'i18next'
 
-export const Footer = () => {
+const Footer = () => {
   const { brazil, usa } = SVGs
   const { i18n } = useTranslation()
 
@@ -17,6 +17,7 @@ export const Footer = () => {
     </Content>
   )
 }
+export default Footer
 
 const Content = styled.div`
   display: flex;

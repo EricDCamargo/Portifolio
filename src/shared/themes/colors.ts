@@ -7,6 +7,12 @@ export interface ColorsType {
   wppColor: string
   linkedin: string
   gmail: string
+  react: string
+  typescript: string
+  git: string
+  vite: string
+  angular: string
+  node: string
 }
 
 export const colors: ColorsType = {
@@ -17,5 +23,11 @@ export const colors: ColorsType = {
   softBlack: '#1F2023',
   wppColor: '#25D366',
   linkedin: '#0077b5',
-  gmail: '#c71610'
+  gmail: '#c71610',
+  react: '#61dbfb',
+  typescript: '#007acc',
+  git: 'rgb(222, 76, 54)',
+  vite: '#646cff',
+  angular: '#C3002F',
+  node: '#83CD29'
 }

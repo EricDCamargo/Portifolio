@@ -6,6 +6,12 @@ import noteAnimation from '@assets/animations/NoteAnimation.json'
 import gitHubIcon from '@assets/icon-github.svg'
 import linkedinIcon from '@assets/icon-linkedin.svg'
 import photoWithoutBack from '@assets/photo_without_back.png'
+import gitSvg from '@assets/git.svg'
+import reactSvg from '@assets/react.svg'
+import typescriptSvg from '@assets/typescript.svg'
+import viteSvg from '@assets/vite.svg'
+import nodeSvg from '@assets/node.svg'
+import angularSvg from '@assets/angular.svg'
 export const SVGs = {
   brazil,
   usa,
@@ -14,5 +20,11 @@ export const SVGs = {
   noteAnimation,
   gitHubIcon,
   linkedinIcon,
-  photoWithoutBack
+  photoWithoutBack,
+  reactSvg,
+  typescriptSvg,
+  gitSvg,
+  viteSvg,
+  nodeSvg,
+  angularSvg
 }

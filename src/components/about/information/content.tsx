@@ -1,5 +1,5 @@
-import { string } from 'prop-types'
-import { FaUser, FaBriefcase, FaGraduationCap, FaReact } from 'react-icons/fa'
+import { colors } from '@src/shared/themes/colors'
+import { FaUser, FaBriefcase, FaReact } from 'react-icons/fa'
 import { RiGraduationCapFill } from 'react-icons/ri'
 import { styled } from 'styled-components'
 
@@ -33,16 +33,16 @@ export const TabContent = ({ currentTab, currentArrays }: TabContentProps) => {
 const Conteiner = styled.div`
   width: 100%;
   height: 100%;
-
-  @media (max-width: 425px) {
-    min-height: 200px;
-  }
+  min-height: 250px;
 `
 const Item = styled.div`
   .item {
-    font-size: 11px;
+    font-size: 13px;
+    @media (max-width: 450px) {
+      font-size: 11px;
+    }
   }
   .description {
-    color: #ff004f;
+    color: ${colors.pink};
   }
 `

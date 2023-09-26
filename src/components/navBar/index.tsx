@@ -30,7 +30,9 @@ export const NavBar = () => {
         <LogoTitle size={35} color={colors.white}>
           Eric
         </LogoTitle>
-        <LogoTitle size={35} color={colors.primary}>.dev</LogoTitle>
+        <LogoTitle size={35} color={colors.pink}>
+          .dev
+        </LogoTitle>
       </Logo>
       <Sections>
         <Section onClick={e => smoothScroll(e, 'home')}>
@@ -136,8 +138,8 @@ const LogoTitle = styled.label<{ color: string; size: number }>`
   transition: 0.5s;
   cursor: pointer;
 
-  :hover {
-    color: ${colors.primary};
+  &:hover {
+    color: ${colors.purple};
     transform: scale(1.1);
   }
 `
@@ -189,6 +191,7 @@ const Icons = styled.div`
   display: flex;
   column-gap: 15px;
   display: flex;
+
   .flag {
     cursor: pointer;
     width: 30px;
@@ -197,6 +200,26 @@ const Icons = styled.div`
   .icon {
     color: ${colors.white};
     cursor: pointer;
+    transition: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .iconWpp {
+    &:hover {
+      color: ${colors.wppColor};
+    }
+  }
+  .iconLinkedin {
+    &:hover {
+      color: ${colors.linkedin};
+    }
+  }
+
+  .iconGmail {
+    &:hover {
+      color: ${colors.gmail};
+    }
   }
 `
 

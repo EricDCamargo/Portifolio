@@ -160,14 +160,21 @@ const HomeText = styled.div`
     background: rgb(63, 48, 71);
     background: linear-gradient(
       135deg,
-      rgba(63, 48, 71, 1) 48%,
-      rgba(81, 113, 165, 1) 76%
+      ${colors.black} 60%,
+      ${colors.pink} 20%
     );
     box-shadow: ${colors.purple} 0px 1px 5px;
     border-radius: 100px;
     font-weight: 700;
     font-size: 15px;
     text-transform: uppercase;
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        ${colors.pink} 60%,
+        ${colors.black} 20%
+      );
+    }
   }
 
   h1 {
@@ -312,9 +319,9 @@ const MainButton = styled.div`
   .bnt {
     display: inline-block;
     padding: 14px 34px;
-    background: ${colors.purple};
+    background: ${colors.pink};
     color: ${colors.white};
-    border: 2px solid ${colors.purple};
+    border: 2px solid ${colors.pink};
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
@@ -324,16 +331,16 @@ const MainButton = styled.div`
   .bnt:hover {
     transform: translateY(-5px);
     background: transparent;
-    color: ${colors.purple};
+    color: ${colors.pink};
   }
   .two {
-    background: #141414;
-    border: 2px solid #141414;
+    background: ${colors.black2};
+    border: 2px solid ${colors.black2};
     color: ${colors.white};
     margin-left: 25px;
   }
   .two:hover {
-    color: #141414;
+    color: ${colors.black2};
     background: ${colors.white};
     border: 2px solid ${colors.white};
   }

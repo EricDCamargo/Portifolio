@@ -1,3 +1,4 @@
+import { colors } from '@src/shared/themes/colors'
 import { t } from 'i18next'
 import { styled } from 'styled-components'
 
@@ -49,7 +50,7 @@ const Tab = styled.div<{ isActive: boolean }>`
   position: relative;
   transition: 0ms.1s;
   border-bottom: 2px solid
-    ${props => (props.isActive ? '#ff004f' : 'transparent')};
+    ${props => (props.isActive ? colors.pink : 'transparent')};
   @media (max-width: 425px) {
     font-size: 15px;
   }

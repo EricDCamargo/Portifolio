@@ -23,9 +23,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <Section onClick={e => smoothScroll(e, 'home')}>
-        {t('home:home')}
-        </Section>
+      <Section onClick={e => smoothScroll(e, 'home')}>{t('home:home')}</Section>
       <Section onClick={e => smoothScroll(e, 'about')}>
         {t('home:about')}
       </Section>
@@ -82,7 +80,7 @@ const Section = styled.a`
   transition: 0.5s;
   cursor: pointer;
   :hover {
-    color: ${colors.primary};
+    color: ${colors.purple};
     transform: scale(1.1);
   }
 

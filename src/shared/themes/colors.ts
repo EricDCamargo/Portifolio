@@ -1,8 +1,9 @@
 export interface ColorsType {
-  primary: string
   purple: string
+  pink: string
   white: string
   black: string
+  black2: string
   softBlack: string
   wppColor: string
   linkedin: string
@@ -16,10 +17,11 @@ export interface ColorsType {
 }
 
 export const colors: ColorsType = {
-  primary: '#2EC4B6',
   purple: '#6932f5',
+  pink: '#ff004f',
   white: '#FFF',
   black: '#1C1C1F',
+  black2: '#141414',
   softBlack: '#1F2023',
   wppColor: '#25D366',
   linkedin: '#0077b5',

@@ -5,13 +5,12 @@ import { useState } from 'react'
 import { InfoTabs } from './information/tabs'
 import { TabContent } from './information/content'
 import Lottie, { Options } from 'react-lottie'
-import wolfAnimation from '@assets/animations/wolfAnimation.json'
 import useWindowSize from '@src/shared/hooks/getWindowSize'
 import { useTranslation } from 'react-i18next'
 import { ageCalc } from '@src/shared/utils/functions'
 
 const About = () => {
-  const { profilePhoto } = SVGs
+  const { profilePhoto, techAnimation } = SVGs
   const size = useWindowSize()
   const { t } = useTranslation()
   const [activeTopc, setActiveTopc] = useState<string>('Experience')
@@ -48,7 +47,7 @@ const About = () => {
   const defaultOptions: Options = {
     loop: true,
     autoplay: true,
-    animationData: wolfAnimation,
+    animationData: techAnimation,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice'
     }
@@ -111,14 +110,19 @@ const Container = styled.div`
 const ProfilePhoto = styled.div<{ url: string }>`
   background: url(${({ url }) => url});
   display: inline-block;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
+  transition: 0.9s;
+
+  &:hover {
+    -webkit-box-shadow: 5px 5px 15px 5px ${colors.pink};
+  }
 
   @media (min-width: 300px) and (max-width: 1000px) {
     width: 300px;
@@ -134,7 +138,7 @@ const ProfilePhoto = styled.div<{ url: string }>`
 const TextArea = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 40%;
+  min-width: 50%;
   width: 40%;
   justify-content: center;
   color: ${colors.white};

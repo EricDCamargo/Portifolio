@@ -5,11 +5,7 @@ import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { RxHamburgerMenu } from 'react-icons/rx'
-import {
-  BsChevronDoubleLeft,
-  BsChevronDoubleRight,
-  BsLinkedin
-} from 'react-icons/bs'
+import { BsLinkedin } from 'react-icons/bs'
 import styled from 'styled-components'
 import { Hamburguer } from '../hamburguer'
 import { SiGmail, SiWhatsapp } from 'react-icons/si'

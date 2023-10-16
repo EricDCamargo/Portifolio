@@ -4,35 +4,47 @@ import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
 import styled from 'styled-components'
 
 const Contact = () => {
-  const { wppColor, linkedin, gmail } = colors
+  const { wppColor, linkedin, gmail, instagram } = colors
   const email = 'ericdcamargo@gmail.com'
 
   const handleGmailIconClick = async () => {
     return (window.location.href = `mailto:${email}`)
   }
   const { t } = useTranslation()
+
   return (
     <Container id="contact">
       <h2>{t('home:contactWay')}</h2>
       <p className="paragraph">{t('home:contactDesc')}</p>
       <ContactWay>
         <DataCard hover={wppColor} href="https://contate.me/eric-camargo">
-          <SiWhatsapp />
+          <div className="iconConteiner">
+            <SiWhatsapp />
+          </div>
           <p>(15) 997284066</p>
         </DataCard>
         <DataCard
           hover={linkedin}
           href="https://www.linkedin.com/in/ericdellaicamargo/"
         >
-          <SiLinkedin />
+          <div className="iconConteiner">
+            <SiLinkedin />
+          </div>
           <p>Eric Camargo</p>
         </DataCard>
-        <DataCard href="https://www.instagram.com/dellaicamargo/">
-          <SiInstagram className="gradient" />
+        <DataCard
+          hover={instagram}
+          href="https://www.instagram.com/dellaicamargo/"
+        >
+          <div className="iconConteiner">
+            <SiInstagram className="gradient" />
+          </div>
           <p className="insta">@dellaicamargo</p>
         </DataCard>
         <DataCard onClick={handleGmailIconClick} hover={gmail}>
-          <SiGmail />
+          <div className="iconConteiner">
+            <SiGmail />
+          </div>
           <p>ericdcamargo</p>
         </DataCard>
       </ContactWay>
@@ -76,20 +88,33 @@ const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
   align-items: center;
   column-gap: 10px;
   padding: 0 10px;
-  width: 200px;
+  width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 50px;
+  height: 80px;
+  border-radius: 100px;
   color: ${colors.white};
   background: ${colors.softBlack};
   cursor: pointer;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  :hover {
+  .iconConteiner {
+    font-size: 1.5rem;
+    border: solid 2px ${colors.white};
+    width: 3rem;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+  }
+
+  &:hover {
     color: ${({ hover }) => hover};
-
-    .gradient {
-      color: #fd5949;
+    .iconConteiner {
+      border: solid 2px ${({ hover }) => hover};
     }
 
     .insta {

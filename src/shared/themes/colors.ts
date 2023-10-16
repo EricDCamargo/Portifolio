@@ -7,6 +7,7 @@ export interface ColorsType {
   softBlack: string
   wppColor: string
   linkedin: string
+  instagram: string
   gmail: string
   react: string
   typescript: string
@@ -25,6 +26,7 @@ export const colors: ColorsType = {
   softBlack: '#1F2023',
   wppColor: '#25D366',
   linkedin: '#0077b5',
+  instagram: '#fd5949',
   gmail: '#c71610',
   react: '#61dbfb',
   typescript: '#007acc',

@@ -37,9 +37,6 @@ export const NavBar = () => {
         <Section onClick={e => smoothScroll(e, 'about')}>
           {t('home:about')}
         </Section>
-        <Section onClick={e => smoothScroll(e, 'skills')}>
-          {t('home:skills')}
-        </Section>
         <Section onClick={e => smoothScroll(e, 'contact')}>
           {t('home:contact')}
         </Section>

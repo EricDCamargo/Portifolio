@@ -1,20 +1,20 @@
 export interface ColorsType {
-  purple: string
-  pink: string
-  white: string
-  black: string
-  black2: string
-  softBlack: string
-  wppColor: string
-  linkedin: string
-  instagram: string
-  gmail: string
-  react: string
-  typescript: string
-  git: string
-  vite: string
-  angular: string
-  node: string
+  purple: string;
+  pink: string;
+  white: string;
+  black: string;
+  black2: string;
+  softBlack: string;
+  wppColor: string;
+  linkedin: string;
+  instagram: string;
+  gmail: string;
+  react: string;
+  typescript: string;
+  git: string;
+  vite: string;
+  angular: string;
+  node: string;
 }
 
 export const colors: ColorsType = {
@@ -33,5 +33,5 @@ export const colors: ColorsType = {
   git: 'rgb(222, 76, 54)',
   vite: '#646cff',
   angular: '#C3002F',
-  node: '#83CD29'
-}
+  node: '#83CD29',
+};

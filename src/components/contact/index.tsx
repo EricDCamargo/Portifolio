@@ -1,58 +1,52 @@
-import { colors } from '@src/shared/themes/colors'
-import { useTranslation } from 'react-i18next'
-import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si'
-import styled from 'styled-components'
+import { colors } from '@src/shared/themes/colors';
+import { useTranslation } from 'react-i18next';
+import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si';
+import styled from 'styled-components';
 
 const Contact = () => {
-  const { wppColor, linkedin, gmail, instagram } = colors
-  const email = 'ericdcamargo@gmail.com'
+  const { wppColor, linkedin, gmail, instagram } = colors;
+  const email = 'ericdcamargo@gmail.com';
 
   const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${email}`)
-  }
-  const { t } = useTranslation()
+    return (window.location.href = `mailto:${email}`);
+  };
+  const { t } = useTranslation();
 
   return (
-    <Container id="contact">
+    <Container id='contact'>
       <h2>{t('home:contactWay')}</h2>
-      <p className="paragraph">{t('home:contactDesc')}</p>
+      <p className='paragraph'>{t('home:contactDesc')}</p>
       <ContactWay>
-        <DataCard hover={wppColor} href="https://contate.me/eric-camargo">
-          <div className="iconConteiner">
+        <DataCard hover={wppColor} href='https://contate.me/eric-camargo'>
+          <div className='iconConteiner'>
             <SiWhatsapp />
           </div>
           <p>(15) 997284066</p>
         </DataCard>
-        <DataCard
-          hover={linkedin}
-          href="https://www.linkedin.com/in/ericdellaicamargo/"
-        >
-          <div className="iconConteiner">
+        <DataCard hover={linkedin} href='https://www.linkedin.com/in/ericdellaicamargo/'>
+          <div className='iconConteiner'>
             <SiLinkedin />
           </div>
           <p>Eric Camargo</p>
         </DataCard>
-        <DataCard
-          hover={instagram}
-          href="https://www.instagram.com/dellaicamargo/"
-        >
-          <div className="iconConteiner">
-            <SiInstagram className="gradient" />
+        <DataCard hover={instagram} href='https://www.instagram.com/dellaicamargo/'>
+          <div className='iconConteiner'>
+            <SiInstagram className='gradient' />
           </div>
-          <p className="insta">@dellaicamargo</p>
+          <p className='insta'>@dellaicamargo</p>
         </DataCard>
         <DataCard onClick={handleGmailIconClick} hover={gmail}>
-          <div className="iconConteiner">
+          <div className='iconConteiner'>
             <SiGmail />
           </div>
           <p>ericdcamargo</p>
         </DataCard>
       </ContactWay>
     </Container>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
 
 const Container = styled.div`
   display: flex;
@@ -73,14 +67,14 @@ const Container = styled.div`
     text-align: center;
     margin-bottom: 30px;
   }
-`
+`;
 const ContactWay = styled.section`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-`
+`;
 
 const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
   display: flex;
@@ -137,4 +131,4 @@ const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
       -moz-text-fill-color: transparent;
     }
   }
-`
+`;

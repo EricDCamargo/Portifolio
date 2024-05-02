@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import * as path from 'path'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import * as path from 'path';
+import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,8 +12,9 @@ export default defineConfig({
       '@routes': path.resolve(__dirname, './src/routes'),
       '@assets': path.resolve(__dirname, './src/assets'),
       '@pages': path.resolve(__dirname, './src/pages'),
-      '@themes': path.resolve(__dirname, './src/shared/themes')
-    }
+      '@shared': path.resolve(__dirname, './src/shared'),
+      '@themes': path.resolve(__dirname, './src/shared/themes'),
+    },
   },
-  plugins: [react()]
-})
+  plugins: [react()],
+});

@@ -1,25 +1,25 @@
-import { SVGs } from '@src/assets'
-import useWindowSize from '@src/shared/hooks/getWindowSize'
-import { colors } from '@src/shared/themes/colors'
-import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions'
-import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { BsLinkedin } from 'react-icons/bs'
-import styled from 'styled-components'
-import { Hamburguer } from '../hamburguer'
-import { SiGmail, SiWhatsapp } from 'react-icons/si'
+import { SVGs } from '@src/assets';
+import useWindowSize from '@src/shared/hooks/getWindowSize';
+import { colors } from '@src/shared/themes/colors';
+import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { BsLinkedin } from 'react-icons/bs';
+import styled from 'styled-components';
+import { Hamburguer } from '../../shared/components/hamburguer';
+import { SiGmail, SiWhatsapp } from 'react-icons/si';
 
 export const NavBar = () => {
-  const gmail = 'ericdcamargo@gmail.com'
-  const size = useWindowSize()
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
-  const { i18n, t } = useTranslation()
+  const gmail = 'ericdcamargo@gmail.com';
+  const size = useWindowSize();
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const { i18n, t } = useTranslation();
 
-  const { brazil, usa } = SVGs
+  const { brazil, usa } = SVGs;
   const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${gmail}`)
-  }
+    return (window.location.href = `mailto:${gmail}`);
+  };
   return (
     <Container>
       <Logo>
@@ -31,49 +31,37 @@ export const NavBar = () => {
         </LogoTitle>
       </Logo>
       <Sections>
-        <Section onClick={e => smoothScroll(e, 'home')}>
-          {t('home:home')}
-        </Section>
-        <Section onClick={e => smoothScroll(e, 'about')}>
-          {t('home:about')}
-        </Section>
-        <Section onClick={e => smoothScroll(e, 'contact')}>
-          {t('home:contact')}
-        </Section>
+        <Section onClick={(e) => smoothScroll(e, 'home')}>{t('home:home')}</Section>
+        <Section onClick={(e) => smoothScroll(e, 'about')}>{t('home:about')}</Section>
+        <Section onClick={(e) => smoothScroll(e, 'experience')}>{t('home:experience')}</Section>
+        <Section onClick={(e) => smoothScroll(e, 'contact')}>{t('home:contact')}</Section>
       </Sections>
       <Links>
         <Icons>
-          <a href="https://contate.me/eric-camargo" target="_blank">
-            <SiWhatsapp size={18} className="icon iconWpp" />
+          <a href='https://contate.me/eric-camargo' target='_blank'>
+            <SiWhatsapp size={18} className='icon iconWpp' />
           </a>
-          <SiGmail
-            onClick={handleGmailIconClick}
-            className="icon iconGmail"
-            size={18}
-          />
-          <a
-            href="https://www.linkedin.com/in/ericdellaicamargo/"
-            target="_blank"
-          >
-            <BsLinkedin className="icon iconLinkedin" size={18} />
+          <SiGmail onClick={handleGmailIconClick} className='icon iconGmail' size={18} />
+          <a href='https://www.linkedin.com/in/ericdellaicamargo/' target='_blank'>
+            <BsLinkedin className='icon iconLinkedin' size={18} />
           </a>
           <img
             onClick={() => {
-              i18n.changeLanguage('ptBR')
-              changeAppLanguage('ptBR')
+              i18n.changeLanguage('ptBR');
+              changeAppLanguage('ptBR');
             }}
-            className="flag"
+            className='flag'
             src={brazil}
-            alt="Brazil Flag"
+            alt='Brazil Flag'
           />
           <img
             onClick={() => {
-              i18n.changeLanguage('en')
-              changeAppLanguage('en')
+              i18n.changeLanguage('en');
+              changeAppLanguage('en');
             }}
-            className="flag"
+            className='flag'
             src={usa}
-            alt="USA Flag"
+            alt='USA Flag'
           />
         </Icons>
       </Links>
@@ -82,16 +70,14 @@ export const NavBar = () => {
           <RxHamburgerMenu
             color={colors.white}
             size={22}
-            onClick={() => setIsMenuOpen(state => !state)}
+            onClick={() => setIsMenuOpen((state) => !state)}
           />
         </HamburguerMenuArea>
       )}
-      {isMenuOpen && size.width < 1000 && (
-        <Hamburguer setIsMenuOpen={setIsMenuOpen} />
-      )}
+      {isMenuOpen && size.width < 1000 && <Hamburguer setIsMenuOpen={setIsMenuOpen} />}
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
   display: grid;
@@ -115,14 +101,14 @@ const Container = styled.div`
     position: fixed;
     top: 0;
   }
-`
+`;
 
 const Logo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: fit-content;
-`
+`;
 
 const LogoTitle = styled.label<{ color: string; size: number }>`
   text-decoration: none;
@@ -135,7 +121,7 @@ const LogoTitle = styled.label<{ color: string; size: number }>`
     color: ${colors.purple};
     transform: scale(1.1);
   }
-`
+`;
 
 const Links = styled.div`
   display: flex;
@@ -145,7 +131,7 @@ const Links = styled.div`
   @media (max-width: 999px) {
     display: none;
   }
-`
+`;
 
 const Sections = styled.div`
   display: flex;
@@ -160,7 +146,7 @@ const Sections = styled.div`
   @media (max-width: 999px) {
     display: none;
   }
-`
+`;
 
 const Section = styled.a`
   text-decoration: none;
@@ -178,7 +164,7 @@ const Section = styled.a`
   @media (max-width: 1000px) {
     font-size: 22px;
   }
-`
+`;
 
 const Icons = styled.div`
   display: flex;
@@ -214,7 +200,7 @@ const Icons = styled.div`
       color: ${colors.gmail};
     }
   }
-`
+`;
 
 const HamburguerMenuArea = styled.div`
   display: flex;
@@ -222,4 +208,4 @@ const HamburguerMenuArea = styled.div`
   align-items: center;
   height: 100%;
   padding: 10px 0px;
-`
+`;

@@ -21,7 +21,8 @@
       "@routes/*": ["./src/routes/*"],
       "@assets/*": ["./src/assets/*"],
       "@pages/*": ["./src/pages/*"],
-      "@themes/*": ["./src/shared/themes/*"]
+      "@themes/*": ["./src/shared/themes/*"],
+      "@shared/*": ["./src/shared/*"]
     }
   },
   "include": ["./src", "./src/index.d.ts"],

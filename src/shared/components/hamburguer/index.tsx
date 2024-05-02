@@ -1,78 +1,65 @@
-import { SVGs } from '@src/assets'
-import { colors } from '@src/shared/themes/colors'
-import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions'
-import { Dispatch, SetStateAction } from 'react'
-import { useTranslation } from 'react-i18next'
-import { SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si'
-import styled from 'styled-components'
+import { SVGs } from '@src/assets';
+import { colors } from '@src/shared/themes/colors';
+import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions';
+import { Dispatch, SetStateAction } from 'react';
+import { useTranslation } from 'react-i18next';
+import { SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si';
+import styled from 'styled-components';
 
 interface Props {
-  setIsMenuOpen: Dispatch<SetStateAction<boolean>>
+  setIsMenuOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 export const Hamburguer = ({ setIsMenuOpen }: Props) => {
-  const gmail = 'ericdcamargo@gmail.com'
+  const gmail = 'ericdcamargo@gmail.com';
 
   const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${gmail}`)
-  }
+    return (window.location.href = `mailto:${gmail}`);
+  };
 
-  const { t, i18n } = useTranslation()
+  const { t, i18n } = useTranslation();
 
-  const { brazil, usa } = SVGs
+  const { brazil, usa } = SVGs;
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <Section onClick={e => smoothScroll(e, 'home')}>{t('home:home')}</Section>
-      <Section onClick={e => smoothScroll(e, 'about')}>
-        {t('home:about')}
-      </Section>
-      <Section onClick={e => smoothScroll(e, 'skills')}>
-        {t('home:skills')}
-      </Section>
-      <Section onClick={e => smoothScroll(e, 'contact')}>
-        {t('home:contact')}
-      </Section>
+      <Section onClick={(e) => smoothScroll(e, 'home')}>{t('home:home')}</Section>
+      <Section onClick={(e) => smoothScroll(e, 'about')}>{t('home:about')}</Section>
+      <Section onClick={(e) => smoothScroll(e, 'skills')}>{t('home:skills')}</Section>
+      <Section onClick={(e) => smoothScroll(e, 'contact')}>{t('home:contact')}</Section>
       <Icons>
-        <a href="https://contate.me/eric-camargo" target="_blank">
-          <SiWhatsapp size={18} className="icon iconWpp" />
+        <a href='https://contate.me/eric-camargo' target='_blank'>
+          <SiWhatsapp size={18} className='icon iconWpp' />
         </a>
-        <a
-          href="https://www.linkedin.com/in/ericdellaicamargo/"
-          target="_blank"
-        >
-          <SiLinkedin size={18} className="icon iconLinkedin" />
+        <a href='https://www.linkedin.com/in/ericdellaicamargo/' target='_blank'>
+          <SiLinkedin size={18} className='icon iconLinkedin' />
         </a>
-        <SiGmail
-          size={18}
-          className="icon iconGmail"
-          onClick={handleGmailIconClick}
-        />
+        <SiGmail size={18} className='icon iconGmail' onClick={handleGmailIconClick} />
       </Icons>
       <Icons>
         <img
           onClick={() => {
-            i18n.changeLanguage('ptBR')
-            changeAppLanguage('ptBR')
+            i18n.changeLanguage('ptBR');
+            changeAppLanguage('ptBR');
           }}
-          className="languageSelector"
+          className='languageSelector'
           src={brazil}
-          alt="Brazil Flag"
+          alt='Brazil Flag'
         />
         <hr />
         <img
           onClick={() => {
-            i18n.changeLanguage('en')
-            changeAppLanguage('en')
+            i18n.changeLanguage('en');
+            changeAppLanguage('en');
           }}
-          className="languageSelector"
+          className='languageSelector'
           src={usa}
-          alt="USA Flag"
+          alt='USA Flag'
         />
       </Icons>
     </HamburguerItems>
-  )
-}
+  );
+};
 
 const Section = styled.a`
   text-decoration: none;
@@ -87,7 +74,7 @@ const Section = styled.a`
   @media (max-width: 1000px) {
     font-size: 22px;
   }
-`
+`;
 
 const HamburguerItems = styled.div`
   transition: 1s;
@@ -104,7 +91,7 @@ const HamburguerItems = styled.div`
   padding: 15px 10px;
   row-gap: 10px;
   background-color: ${colors.black};
-`
+`;
 
 const HamburguerDetail = styled.div`
   position: absolute;
@@ -115,7 +102,7 @@ const HamburguerDetail = styled.div`
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 8px solid ${colors.white};
-`
+`;
 
 const Icons = styled.div`
   display: flex;
@@ -152,4 +139,4 @@ const Icons = styled.div`
       color: ${colors.gmail};
     }
   }
-`
+`;

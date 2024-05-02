@@ -1,11 +1,11 @@
-import { colors } from '@src/shared/themes/colors'
-import { ReactNode } from 'react'
-import styled from 'styled-components'
-import { NavBar } from '../navBar'
+import { colors } from '@src/shared/themes/colors';
+import { ReactNode } from 'react';
+import styled from 'styled-components';
+import { NavBar } from '../../../components/navBar';
 
 type TemplateProps = {
-  children: ReactNode
-}
+  children: ReactNode;
+};
 
 export const Template = ({ children }: TemplateProps) => {
   return (
@@ -13,8 +13,8 @@ export const Template = ({ children }: TemplateProps) => {
       <NavBar />
       <Content>{children}</Content>
     </Grid>
-  )
-}
+  );
+};
 
 const Grid = styled.div`
   display: grid;
@@ -33,7 +33,7 @@ const Grid = styled.div`
   }
   min-height: 100vh;
   height: 100vh;
-`
+`;
 
 const Content = styled.div`
   grid-area: CT;
@@ -45,4 +45,4 @@ const Content = styled.div`
   overflow: auto;
   overflow-x: hidden;
   grid-template-columns: unset;
-`
+`;

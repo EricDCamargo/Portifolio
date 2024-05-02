@@ -1,16 +1,16 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 type ButtonProps = {
-  label: string
-}
+  label: string;
+};
 
 export const Button = ({ label }: ButtonProps) => {
   return (
-    <ButtonConteiner data-text="Awesome">
+    <ButtonConteiner data-text='Awesome'>
       <span>{label}</span>
     </ButtonConteiner>
-  )
-}
+  );
+};
 
 const ButtonConteiner = styled.a`
   text-transform: uppercase;
@@ -27,4 +27,4 @@ const ButtonConteiner = styled.a`
   :hover {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
-`
+`;

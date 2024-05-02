@@ -15,5 +15,5 @@ export const fontSize = {
   bigger004: 31,
   bigger005: 36,
   bigger006: 38,
-  bigger007: 40
-}
+  bigger007: 40,
+};

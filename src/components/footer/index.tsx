@@ -1,23 +1,23 @@
-import { colors } from '@src/shared/themes/colors'
-import styled from 'styled-components'
-import { SVGs } from '@src/assets'
-import { useTranslation } from 'react-i18next'
-import { BiCopyright } from 'react-icons/bi'
-import { t } from 'i18next'
+import { colors } from '@src/shared/themes/colors';
+import styled from 'styled-components';
+import { SVGs } from '@src/assets';
+import { useTranslation } from 'react-i18next';
+import { BiCopyright } from 'react-icons/bi';
+import { t } from 'i18next';
 
 const Footer = () => {
-  const { brazil, usa } = SVGs
-  const { i18n } = useTranslation()
+  const { brazil, usa } = SVGs;
+  const { i18n } = useTranslation();
 
   return (
     <Content>
       <BiCopyright color={colors.white} />
       <p>Copyright - Eric Dellai Camargo - {t('home:rightsReserved')}</p>
-      <img src={i18n.language === 'ptBR' ? brazil : usa} alt="Country flag" />
+      <img src={i18n.language === 'ptBR' ? brazil : usa} alt='Country flag' />
     </Content>
-  )
-}
-export default Footer
+  );
+};
+export default Footer;
 
 const Content = styled.div`
   display: flex;
@@ -38,4 +38,4 @@ const Content = styled.div`
     font-size: 0.8rem;
     color: ${colors.white};
   }
-`
+`;

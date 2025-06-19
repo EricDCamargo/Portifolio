@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { SVGs } from '@src/assets';
 import Resume from '@src/shared/assets/Eric Dellai Camargo.pdf';
 import { colors } from '@src/shared/themes/colors';
-import { smoothScroll } from '@src/shared/utils/functions';
+import { ageCalc, smoothScroll } from '@src/shared/utils/functions';
 import { fontSize } from '@src/shared/themes/fonts';
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
@@ -41,7 +41,7 @@ const MainSection = () => {
         <HomeText className='home-text'>
           <span>{t('home:SoftwareDeveloper')}</span>
           <h1>Eric Dellai Camargo</h1>
-          <p>{t('home:introduction')}</p>
+          <p>{t('home:introduction', { age: ageCalc() })}</p>
           <MainButton className='main-bnt'>
             <div onClick={() => handleResumeDownload()} className='bnt'>
               {t('home:DownloadCV')}

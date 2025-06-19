@@ -9,6 +9,7 @@ import delta from '@assets/delta.svg';
 import epiousionIt from '@assets/epiousion.svg';
 import inttercom from '@assets/inttercom.svg';
 import pts from '@assets/pts.svg';
+import diebold from '@assets/diebold.svg';
 
 export const SVGs = {
   techAnimation,
@@ -22,4 +23,5 @@ export const SVGs = {
   pts,
   epiousionIt,
   inttercom,
+  diebold,
 };

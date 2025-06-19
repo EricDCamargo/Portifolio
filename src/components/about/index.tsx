@@ -59,12 +59,7 @@ const About = () => {
       <TextArea>
         <div>
           <h1>{t('home:about')}</h1>
-          <p>
-            {t('home:resume')}
-            {ageCalc()}
-            &nbsp;
-            {t('home:yearsOld')}
-          </p>
+          <p>{t('home:resume', { age: ageCalc() })}</p>
         </div>
         <InfoTabs currentTab={activeTopc} onClick={setActiveTopc} />
         <TabContent currentTab={activeTopc} currentArrays={data[activeTopc as keyof MockData]} />

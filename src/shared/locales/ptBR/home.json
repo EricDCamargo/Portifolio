@@ -8,23 +8,39 @@
     "contactWay": "Entre em Contato",
     "contactDesc": "Gostou do meu perfil e quer me conhecer melhor? Entre em contato via e-mail ou redes sociais!",
     "rightsReserved": "Todos os direitos reservados",
-    "resume": "Oi, me chamo Eric Dellai Camargo moro em Salto - SP, e tenho ",
-    "yearsOld": "anos de idade.",
+    "resume": "Oi, me chamo Eric Dellai Camargo moro em Salto - SP, e tenho {{age}} anos de idade.",
     "experience": "Experiência",
     "graduations": "Graduação",
     "skills": "Habilidades",
-    "ExperienceI": "Epiousion IT - Desenvolvedor de Software Júnior",
-    "ExperienceII": "Epiousion IT - Desenvolvedor de Software Aprendiz",
-    "ExperienceIII": "Inttercom ATM Services - Técnico de TI",
     "GraduationI": "Fatec - Curso Superior de Tecnologia (CST), Análise e Desenvolvimento De Sistemas",
     "GraduationII": "Microcamp - Curso Técnico , Língua Inglesa e Literaturas de Língua Inglesa",
     "GraduationIII": "Udemy - O curso Ultimate React 2023: React, Redux e mais",
     "reactLevel": "Avançado",
-    "nodeLevel": "Intermediario",
+    "nodeLevel": "Avançado",
     "htmlCssLevel": "Avançado",
-    "introduction": "Olá, seja bem-vindo(a)! Tenho 19 anos, sou desenvolvedor full-stack Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meutrabalho.",
+    "introduction": "Olá, seja bem-vindo(a)! Tenho {{age}} anos, sou desenvolvedor full-stack Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meutrabalho.",
     "DownloadCV": "Baixar CV",
     "MyProjects": "Meus projetos",
-    "MyNetwork": "Minhas redes"
+    "MyNetwork": "Minhas redes",
+
+    "CompanyI": "Epiousion IT",
+    "ExperienceI": "Desenvolvedor de Software Júnior",
+    "PeriodI": "jan/2023 até jun/2023",
+    "DescriptionI": "Durante minha jornada na Epiousion, comecei como Aprendiz e evoluí para o papel de Junior. Foco inicial no desenvolvimento frontend, trabalhando ativamente em projetos de software. Ao longo do tempo, expandi minhas habilidades, participei de reuniões com clientes e desenvolvi proficiência em tecnologias-chave.",
+
+    "CompanyII": "Parque Tecnológico de Sorocaba",
+    "ExperienceII": "Desenvolvedor de Software (Bootcamp)",
+    "PeriodII": "ago/2022 até nov/2022",
+    "DescriptionII": "Fui parte do projeto Imersão Dev criado pelo Parque Tecnológico de Sorocaba. O projeto ofereceu treinamento de hard e soft skills. Além disso, colocarmos nosso conhecimento em prática participando de um projeto de desenvolvimento real no qual desenvolvemos um aplicativo móvel completo",
+
+    "CompanyIII": "Diebold Nixdorf",
+    "ExperienceIII": "Técnico de TI",
+    "PeriodIII": "nov/2023 até nov/2024",
+    "DescriptionIII": "Atuação na instalação, manutenção, atualização de equipamentos (Atm`s cofres inteligentes, terminais de consulta, etc.) para diversos clientes de toda a rede bancaria, provisionamento de toda a infra necessaria para realização do atendimento, atualizações de software, hardware, testes de funcionalidade, instalação de componentes de segurança.",
+
+    "CompanyIV": "Delta Super Mercados",
+    "ExperienceIV": "Operador de Caixa",
+    "PeriodIV": "jul/2023 até out/2023",
+    "DescriptionIV": "Caixa com um forte senso de atendimento ao cliente e precisão em transações financeiras. Proficiente em manter um ambiente organizado, gerenciar transações com cartões de crédito/débito, garantir precisão em registros financeiros e fornecer serviço de alta qualidade aos clientes."
   }
 }

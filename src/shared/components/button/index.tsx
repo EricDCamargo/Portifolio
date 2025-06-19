@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 type ButtonProps = {
   label: string;
+  number: number;
 };
 
 export const Button = ({ label }: ButtonProps) => {
@@ -25,6 +26,8 @@ const ButtonConteiner = styled.a`
   color: #fff;
   cursor: pointer;
   :hover {
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      background-color 0.3s ease,
+      box-shadow 0.3s ease;
   }
 `;

@@ -5,8 +5,10 @@ import { ExperienceProps } from '@src/shared/types';
 import React from 'react';
 import styled from 'styled-components';
 import { TechButton } from '@shared/components/techButton/TechButton';
+import { useTranslation } from 'react-i18next';
 
 const DesktopExperience = () => {
+  const { t } = useTranslation();
   const [activeExperience, setActiveExperience] = React.useState<ExperienceProps>(
     ExperiencesData[0],
   );
@@ -24,16 +26,16 @@ const DesktopExperience = () => {
             key={id}
             onClick={() => onSetActiveExperience(id)}
           >
-            <SvgRender src={logo} width={'140px'} height='40px' alt={company} />
-            <small>{period}</small>
+            <SvgRender src={logo} width={'140px'} height='40px' alt={t(company)} />
+            <small>{t(period)}</small>
           </ExperienceItem>
         ))}
       </ListConteiner>
       <DetailsConteiner>
-        <h1>{activeExperience.company}</h1>
-        <h3>{activeExperience.ocupation}</h3>
-        <small>{activeExperience.period}</small>
-        <p>{activeExperience.description}</p>
+        <h1>{t(activeExperience.company)}</h1>
+        <h3>{t(activeExperience.ocupation)}</h3>
+        <small>{t(activeExperience.period)}</small>
+        <p>{t(activeExperience.description)}</p>
         <ul>
           {activeExperience.techs.map((item) => (
             <TechButton name={item} key={item} />

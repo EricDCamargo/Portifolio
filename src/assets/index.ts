@@ -1,7 +1,7 @@
 import brazil from '@assets/brazil.svg';
 import usa from '@assets/usa.svg';
 import profilePhoto from '@assets/profilePhoto.jpg';
-import photoWithoutBack from '@assets/photo_without_back.png';
+import photoWithoutBack from '@assets/profile.png';
 import gitHubIcon from '@assets/icon-github.svg';
 import linkedinIcon from '@assets/icon-linkedin.svg';
 import techAnimation from '@assets/animations/pcAnimation.json';
@@ -25,5 +25,5 @@ export const SVGs = {
   epiousionIt,
   inttercom,
   diebold,
-  going2
+  going2,
 };

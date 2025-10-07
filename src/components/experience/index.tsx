@@ -22,7 +22,7 @@ const Container = styled.div`
   height: 100%;
   width: 100%;
   max-width: 1200px;
-  min-height: 60vh;
+  min-height: 80vh;
   margin: 0 auto;
   justify-content: space-between;
 

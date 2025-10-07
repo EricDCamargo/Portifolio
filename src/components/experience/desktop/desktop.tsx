@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const DesktopExperience = () => {
   const { t } = useTranslation();
   const [activeExperience, setActiveExperience] = React.useState<ExperienceProps>(
-    ExperiencesData[0],
+    ExperiencesData[2],
   );
 
   const onSetActiveExperience = (id: number) => {
@@ -82,7 +82,7 @@ export const ExperienceItem = styled.li<{ active: boolean }>`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  height: fit-content;
+  height: 100%;
   border-left: solid 3px ${(props) => (props.active ? colors.pink : 'transparent')};
   border-bottom: 1px solid ${colors.black};
   padding: 0.5rem 1rem;
@@ -124,7 +124,7 @@ export const DetailsConteiner = styled.div`
       border-radius: 0.5rem;
       border: solid 2px ${colors.pink};
       cursor: pointer;
-      width: 8rem;
+      width: fit-content;
       font-weight: bold;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 

@@ -18,29 +18,34 @@
     "reactLevel": "Advanced",
     "nodeLevel": "Advanced",
     "htmlCssLevel": "Advanced",
-    "introduction": "Hello, welcome! I am {{age}} years old, a junior full-stack developer, and I live in São Paulo. Feel free to get to know my work better.",
+    "introduction": "Hello, welcome! I am {{age}} years old, a junior full-stack developer, and I live in Sorocaba/SP. Feel free to get to know my work better.",
     "DownloadCV": "Download CV",
     "MyProjects": "My projects",
     "MyNetwork": "My networks",
 
-    "CompanyI": "Epiousion IT",
-    "ExperienceI": "Junior Software Developer",
-    "PeriodI": "Jan/2023 to Jun/2023",
-    "DescriptionI": "During my journey at Epiousion, I started as an Apprentice and progressed to the role of Junior. My initial focus was on frontend development, actively working on software projects. Over time, I expanded my skills, participated in client meetings, and developed proficiency in key technologies.",
+    "CompanyI": "Diebold Nixdorf",
+    "ExperienceI": "IT Technician N2 (PJ/Contract)",
+    "PeriodI": "Aug/2021 to Present",
+    "DescriptionI": "Executed infrastructure migration at Santander, replacing +300 CPUs and reinstalling systems in +100 branches, resulting in a +300% increase in equipment performance. Implemented +500 new lottery terminals for CEF, generating a 110% increase in operational performance and a 35% reduction in failures. Performed preventive maintenance and technical provisioning on ATMs and smart safes for major banks, ensuring high system availability. PJ contract on-demand.",
 
-    "CompanyII": "Sorocaba Technology Park (PTS)",
-    "ExperienceII": "Software Developer (Bootcamp)",
-    "PeriodII": "Aug/2022 to Nov/2022",
-    "DescriptionII": "I was part of the Dev Immersion project created by the Sorocaba Technology Park. The project offered training in both hard and soft skills. In addition, we put our knowledge into practice by participating in a real development project, in which we built a fully functional mobile application.",
+    "CompanyII": "Going2 Corporation S.A.",
+    "ExperienceII": "Community Moderator",
+    "PeriodII": "Nov/2023 to Feb/2024",
+    "DescriptionII": "Managed and served an active community of +40 thousand users, increasing engagement by 15% and overall user satisfaction. Collaborated directly with QA and Development teams, identifying and simulating failures which resulted in a 20% reduction in bug resolution time and a 15% optimization in feature prioritization.",
 
-    "CompanyIII": "Diebold Nixdorf",
-    "ExperienceIII": "IT Technician",
-    "PeriodIII": "Nov/2023 to Nov/2024",
-    "DescriptionIII": "Involved in the installation, maintenance, and upgrading of equipment (ATM`s, smart safes, information terminals, etc.) for various clients across the entire banking network. Responsible for provisioning all necessary infrastructure for service delivery, performing software and hardware updates, functionality testing, and installing security components.",
+    "CompanyIII": "Epiousion IT",
+    "ExperienceIII": "Junior Full Stack Developer",
+    "PeriodIII": "May/2023 to Jun/2023",
+    "DescriptionIII": "Developed a Full Stack web application in React.js/TypeScript for a medical client, defining the entire modular Front-end architecture. Implemented the Backend alongside the Tech Lead in Nest.js and TypeScript, modeled data persistence with Prisma ORM and PostgreSQL, and implemented Accessibility features font size/color increase and Deploy with Docker.",
 
-    "CompanyIV": "Delta Supermarkets",
-    "ExperienceIV": "Cashier",
-    "PeriodIV": "Jul/2023 to Oct/2023",
-    "DescriptionIV": "Cashier with a strong sense of customer service and accuracy in financial transactions. Proficient in maintaining an organized environment, handling credit/debit card transactions, ensuring accuracy in financial records, and delivering high-quality service to customers."
+    "CompanyIV": "Epiousion IT",
+    "ExperienceIV": "Full Stack Developer Intern",
+    "PeriodIV": "Feb/2023 to May/2023",
+    "DescriptionIV": "Developed a Full Stack Team Management system in React.js and TypeScript to optimize internal project tracking, using Node.js in the Backend. Implemented Accessibility features font size adjustment and color scheme.",
+
+    "CompanyV": "Parque Tecnológico de Sorocaba",
+    "ExperienceV": "Full Stack Developer (Bootcamp)",
+    "PeriodV": "Aug/2022 to Nov/2022",
+    "DescriptionV": "Developed a React Native and TypeScript mobile application for APAE with the goal of processing donations and connecting the public to the institution, generating a digital social impact resource. Implemented the Backend in Node.js with Firebase and MySQL integrations, ensuring the application's Full Stack functionality."
   }
 }

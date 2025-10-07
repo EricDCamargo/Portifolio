@@ -18,29 +18,34 @@
     "reactLevel": "Avançado",
     "nodeLevel": "Avançado",
     "htmlCssLevel": "Avançado",
-    "introduction": "Olá, seja bem-vindo(a)! Tenho {{age}} anos, sou desenvolvedor full-stack Jr e moro em São Paulo. Fique à vontade para conhecer melhor o meutrabalho.",
+    "introduction": "Olá, seja bem-vindo(a)! Tenho {{age}} anos, sou desenvolvedor full-stack Jr e moro em Sorocaba/SP. Fique à vontade para conhecer melhor o meu trabalho.",
     "DownloadCV": "Baixar CV",
     "MyProjects": "Meus projetos",
     "MyNetwork": "Minhas redes",
 
-    "CompanyI": "Epiousion IT",
-    "ExperienceI": "Desenvolvedor de Software Júnior",
-    "PeriodI": "jan/2023 até jun/2023",
-    "DescriptionI": "Durante minha jornada na Epiousion, comecei como Aprendiz e evoluí para o papel de Junior. Foco inicial no desenvolvimento frontend, trabalhando ativamente em projetos de software. Ao longo do tempo, expandi minhas habilidades, participei de reuniões com clientes e desenvolvi proficiência em tecnologias-chave.",
+    "CompanyI": "Diebold Nixdorf",
+    "ExperienceI": "Técnico de TI N2 (PJ)",
+    "PeriodI": "ago/2021 até atual",
+    "DescriptionI": "Executei a migração de infraestrutura no Santander substituindo +300 CPUs e reinstalando sistemas em +100 agências, resultando em um aumento de +300% na performance dos equipamentos. Implementei +500 novos terminais lotéricos para a CEF, gerando um aumento de 110% na performance operacional e redução de 35% nas falhas. Realizei manutenção preventiva e provisionamento técnico em ATMs e cofres inteligentes para grandes bancos, garantindo alta disponibilidade dos sistemas.  Contrato PJ sob demanda.",
 
-    "CompanyII": "Parque Tecnológico de Sorocaba",
-    "ExperienceII": "Desenvolvedor de Software (Bootcamp)",
-    "PeriodII": "ago/2022 até nov/2022",
-    "DescriptionII": "Fui parte do projeto Imersão Dev criado pelo Parque Tecnológico de Sorocaba. O projeto ofereceu treinamento de hard e soft skills. Além disso, colocarmos nosso conhecimento em prática participando de um projeto de desenvolvimento real no qual desenvolvemos um aplicativo móvel completo",
+    "CompanyII": "Going2 Corporation S.A.",
+    "ExperienceII": "Community Moderator",
+    "PeriodII": "nov/2023 até fev/2024",
+    "DescriptionII": "Gerenciei e atendi uma comunidade ativa de +40 mil usuários, elevando o engajamento em 15% e a satisfação geral dos usuários. Colaborei diretamente com os times de QA e Desenvolvimento, identificando e simulando falhas que resultaram em redução de 20% no tempo de resolução de bugs e otimização de 15% na priorização de features.",
 
-    "CompanyIII": "Diebold Nixdorf",
-    "ExperienceIII": "Técnico de TI",
-    "PeriodIII": "nov/2023 até nov/2024",
-    "DescriptionIII": "Atuação na instalação, manutenção, atualização de equipamentos (Atm`s cofres inteligentes, terminais de consulta, etc.) para diversos clientes de toda a rede bancaria, provisionamento de toda a infra necessaria para realização do atendimento, atualizações de software, hardware, testes de funcionalidade, instalação de componentes de segurança.",
+    "CompanyIII": "Epiousion IT",
+    "ExperienceIII": "Desenvolvedor Full Stack Júnior",
+    "PeriodIII": "mai/2023 até jun/2023",
+    "DescriptionIII": "Desenvolvi uma aplicação web Full Stack em React.js/TypeScript para um cliente da área médica, definindo toda a arquitetura modular do Front-end. Implementei o Backend junto ao Tech Lead em Nest.js e TypeScript, modelei a persistência de dados com Prisma ORM e PostgreSQL, e implementei recursos de Acessibilidade aumento de fonte/cores e Deploy com Docker.",
 
-    "CompanyIV": "Delta Super Mercados",
-    "ExperienceIV": "Operador de Caixa",
-    "PeriodIV": "jul/2023 até out/2023",
-    "DescriptionIV": "Caixa com um forte senso de atendimento ao cliente e precisão em transações financeiras. Proficiente em manter um ambiente organizado, gerenciar transações com cartões de crédito/débito, garantir precisão em registros financeiros e fornecer serviço de alta qualidade aos clientes."
+    "CompanyIV": "Epiousion IT",
+    "ExperienceIV": "Desenvolvedor Full Stack Estágio",
+    "PeriodIV": "fev/2023 até mai/2023",
+    "DescriptionIV": "Desenvolvi um sistema de Gestão de Equipes Full Stack em React.js e TypeScript para otimizar o acompanhamento de projetos internos, utilizando Node.js no Backend. Implementei recursos de Acessibilidade ajuste de fonte e esquema de cores.",
+
+    "CompanyV": "Parque Tecnológico de Sorocaba",
+    "ExperienceV": "Desenvolvedor Full Stack Bootcamp",
+    "PeriodV": "ago/2022 até nov/2022",
+    "DescriptionV": "Desenvolvi um aplicativo móvel React Native e TypeScript para a APAE com o objetivo de processar doações e conectar a população à instituição, gerando um recurso digital de impacto social. Implementei o Backend em Node.js com integrações de Firebase e MySQL, garantindo o funcionamento Full Stack do aplicativo."
   }
 }

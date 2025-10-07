@@ -30,7 +30,7 @@ const MainSection = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = Resume;
-    link.download = 'Eric Dellai Camargo.pdf';
+    link.download = 'Eric Dellai Camargo - Desenvolvedor Full Stack.pdf';
     link.click();
     document.body.removeChild(link);
   };

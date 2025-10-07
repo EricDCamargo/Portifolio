@@ -10,6 +10,7 @@ import epiousionIt from '@assets/epiousion.svg';
 import inttercom from '@assets/inttercom.svg';
 import pts from '@assets/pts.svg';
 import diebold from '@assets/diebold.svg';
+import going2 from '@assets/going2.png';
 
 export const SVGs = {
   techAnimation,
@@ -24,4 +25,5 @@ export const SVGs = {
   epiousionIt,
   inttercom,
   diebold,
+  going2
 };

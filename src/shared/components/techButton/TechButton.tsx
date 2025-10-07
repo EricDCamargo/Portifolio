@@ -1,5 +1,5 @@
 import React from 'react';
-import { DiScrum } from 'react-icons/di';
+import { DiJavascript, DiMysql, DiScrum } from 'react-icons/di';
 import {
   FaAws,
   FaBootstrap,
@@ -11,20 +11,47 @@ import {
   FaReact,
   FaHtml5,
   FaCss3Alt,
+  FaBitbucket,
+  FaJava,
+  FaSass,
+  FaServer,
 } from 'react-icons/fa';
 
 export type NameTechs =
+  | 'JavaScript'
+  | 'Java'
+  | 'TypeScript'
   | 'React'
+  | 'NextJs'
+  | 'ReactNative'
   | 'NodeJs'
-  | 'AWS'
-  | 'Bootstrap'
+  | 'Express'
+  | 'JWT'
+  | 'ReactHookForm'
+  | 'Zod'
+  | 'StyledComponents'
+  | 'PrismaORM'
+  | 'SQL'
+  | 'PostgreSQL'
+  | 'MySQL'
+  | 'Firebase'
+  | 'Docker'
   | 'Figma'
   | 'Scrum'
+  | 'AWS'
+  | 'RabbitMQ'
   | 'Git'
-  | 'Docker'
-  | 'Jira'
+  | 'RESTfulAPI'
+  | 'SCSS'
+  | 'CSS'
   | 'HTML'
-  | 'CSS';
+  | 'TailwindCSS'
+  | 'MaterialUI'
+  | 'Scrum'
+  | 'Jira'
+  | 'Bitbucket'
+  | 'Software'
+  | 'Hardware';
 
 export interface TechButtonProps {
   name: NameTechs;
@@ -35,17 +62,40 @@ interface TechsIconsProps {
 }
 
 const TechsIcons: TechsIconsProps = {
+  JavaScript: <DiJavascript />,
+  Java: <FaJava />,
+  TypeScript: <SiTypescript />,
   React: <FaReact />,
+  NextJs: <SiNextdotjs />,
+  ReactNative: <BiMobile />,
   NodeJs: <FaNodeJs />,
+  Express: <SiExpress />,
+  JWT: <SiJsonwebtokens />,
+  ReactHookForm: <SiReacthookform />,
+  Zod: <SiZod />,
+  StyledComponents: <SiStyledcomponents />,
+  PrismaORM: <SiPrisma />,
+  SQL: <BsDatabaseFill />,
+  PostgreSQL: <SiPostgresql />,
+  MySQL: <DiMysql />,
+  Firebase: <SiFirebase />,
+  Docker: <FaDocker />,
+  RabbitMQ: <SiRabbitmq />,
+  Git: <FaGitAlt />,
+  RESTfulAPI: <FaServer />,
+  SCSS: <FaSass />,
+  CSS: <FaCss3Alt />,
+  HTML: <FaHtml5 />,
+  TailwindCSS: <SiTailwindcss />,
+  MaterialUI: <SiMui />,
+  Scrum: <DiScrum />,
+  Jira: <FaJira />,
+  Bitbucket: <FaBitbucket />,
   AWS: <FaAws />,
   Bootstrap: <FaBootstrap />,
   Figma: <FaFigma />,
-  Scrum: <DiScrum />,
-  Git: <FaGitAlt />,
-  Docker: <FaDocker />,
-  Jira: <FaJira />,
-  HTML: <FaHtml5 />,
-  CSS: <FaCss3Alt />,
+  Hardware: <BsMotherboard />,
+  Software: <RiComputerFill />,
 };
 
 export const TechButton = ({ name }: TechButtonProps) => {
@@ -59,6 +109,30 @@ export const TechButton = ({ name }: TechButtonProps) => {
 
 import styled from 'styled-components';
 import { colors } from '@src/shared/themes/colors';
+import { BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiJsonwebtokens,
+  SiReacthookform,
+  SiZod,
+  SiStyledcomponents,
+  SiPrisma,
+  SiPostgresql,
+  SiMysql,
+  SiFirebase,
+  SiRabbitmq,
+  SiTailwindcss,
+  SiMui,
+  SiApifox,
+  SiInfracost,
+  SiBmcsoftware,
+  SiEsotericsoftware,
+  SiTaketwointeractivesoftware,
+} from 'react-icons/si';
+import { BiCloud, BiCloudDownload, BiHardHat, BiMobile, BiServer } from 'react-icons/bi';
+import { RiComputerFill, RiComputerLine } from 'react-icons/ri';
 
 export const TechButtonContainer = styled.li`
   display: flex;

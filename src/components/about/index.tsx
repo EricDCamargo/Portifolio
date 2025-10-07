@@ -114,6 +114,7 @@ const ProfilePhoto = styled.div<{ url: string }>`
 
   &:hover {
     -webkit-box-shadow: 5px 5px 15px 5px ${colors.pink};
+    box-shadow: 5px 5px 15px 5px ${colors.pink};
   }
 
   @media (min-width: 300px) and (max-width: 1000px) {

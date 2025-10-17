@@ -25,7 +25,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
       <HamburguerDetail />
       <Section onClick={(e) => smoothScroll(e, 'home')}>{t('home:home')}</Section>
       <Section onClick={(e) => smoothScroll(e, 'about')}>{t('home:about')}</Section>
-      <Section onClick={(e) => smoothScroll(e, 'skills')}>{t('home:skills')}</Section>
+      <Section onClick={(e) => smoothScroll(e, 'experience')}>{t('home:experience')}</Section>
       <Section onClick={(e) => smoothScroll(e, 'contact')}>{t('home:contact')}</Section>
       <Icons>
         <a href='https://contate.me/eric-camargo' target='_blank'>

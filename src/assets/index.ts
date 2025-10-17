@@ -5,12 +5,10 @@ import photoWithoutBack from '@assets/profile.png';
 import gitHubIcon from '@assets/icon-github.svg';
 import linkedinIcon from '@assets/icon-linkedin.svg';
 import techAnimation from '@assets/animations/pcAnimation.json';
-import delta from '@assets/delta.svg';
-import epiousionIt from '@assets/epiousion.svg';
-import inttercom from '@assets/inttercom.svg';
-import pts from '@assets/pts.svg';
+import freelancer from '@assets/freelancer.svg';
 import diebold from '@assets/diebold.svg';
-import going2 from '@assets/going2.png';
+import epiousion from '@assets/epiousion.svg';
+import pts from '@assets/pts.svg';
 
 export const SVGs = {
   techAnimation,
@@ -20,10 +18,8 @@ export const SVGs = {
   gitHubIcon,
   linkedinIcon,
   photoWithoutBack,
-  delta,
-  pts,
-  epiousionIt,
-  inttercom,
+  freelancer,
   diebold,
-  going2,
+  epiousion,
+  pts,
 };

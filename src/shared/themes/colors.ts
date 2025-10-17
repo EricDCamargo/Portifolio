@@ -5,6 +5,9 @@ export interface ColorsType {
   black: string;
   black2: string;
   softBlack: string;
+  softBlack2: string;
+  gray: string;
+  gray2: string;
   wppColor: string;
   linkedin: string;
   instagram: string;
@@ -24,6 +27,9 @@ export const colors: ColorsType = {
   black: '#1C1C1F',
   black2: '#141414',
   softBlack: '#1F2023',
+  softBlack2: '#27272a',
+  gray: '#ccc',
+  gray2: '#444',
   wppColor: '#25D366',
   linkedin: '#0077b5',
   instagram: '#fd5949',

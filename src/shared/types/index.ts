@@ -6,6 +6,8 @@ export interface ExperienceProps {
   ocupation: string;
   logo: string;
   period: string;
+  location: string;
+  type?: string;
   description: string;
   techs: NameTechs[];
 }

@@ -15,6 +15,7 @@ import {
   FaJava,
   FaSass,
   FaServer,
+  FaCloud,
 } from 'react-icons/fa';
 
 export type NameTechs =
@@ -36,6 +37,12 @@ export type NameTechs =
   | 'MySQL'
   | 'Firebase'
   | 'Docker'
+  | 'DockerCompose'
+  | 'Cloudinary'
+  | 'Webpack'
+  | 'Socketio'
+  | 'WordPress'
+  | 'Axios'
   | 'Figma'
   | 'Scrum'
   | 'AWS'
@@ -80,6 +87,12 @@ const TechsIcons: TechsIconsProps = {
   MySQL: <DiMysql />,
   Firebase: <SiFirebase />,
   Docker: <FaDocker />,
+  DockerCompose: <FaDocker />,
+  Cloudinary: <FaCloud />,
+  Webpack: <SiWebpack />,
+  Socketio: <SiSocketdotio />,
+  WordPress: <SiWordpress />,
+  Axios: <SiAxios />,
   RabbitMQ: <SiRabbitmq />,
   Git: <FaGitAlt />,
   RESTfulAPI: <FaServer />,
@@ -120,37 +133,36 @@ import {
   SiStyledcomponents,
   SiPrisma,
   SiPostgresql,
-  SiMysql,
   SiFirebase,
   SiRabbitmq,
   SiTailwindcss,
   SiMui,
-  SiApifox,
-  SiInfracost,
-  SiBmcsoftware,
-  SiEsotericsoftware,
-  SiTaketwointeractivesoftware,
+  SiAxios,
+  SiSocketdotio,
+  SiWebpack,
+  SiWordpress,
 } from 'react-icons/si';
-import { BiCloud, BiCloudDownload, BiHardHat, BiMobile, BiServer } from 'react-icons/bi';
-import { RiComputerFill, RiComputerLine } from 'react-icons/ri';
+import { BiMobile } from 'react-icons/bi';
+import { RiComputerFill } from 'react-icons/ri';
 
 export const TechButtonContainer = styled.li`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  border: solid 2px ${colors.pink};
-  padding: 0.3rem 0.5rem;
-  width: 7rem;
+  background: ${colors.softBlack};
+  border-radius: 40px;
+  padding: 0.2rem 0.6rem;
+  gap: 0.4rem;
+  width: fit-content;
   font-weight: bold;
-  justify-content: space-between;
+  cursor: pointer;
+
+  svg {
+    width: 20px;
+  }
 
   @media (max-width: 1200px) {
-    width: 6rem;
     font-size: 80%;
     justify-content: center;
-    svg {
-      width: 1.5rem;
-    }
   }
 
   @media (max-width: 768px) {
@@ -159,10 +171,6 @@ export const TechButtonContainer = styled.li`
     padding: 0;
     align-items: center;
     justify-content: center;
-    width: 4rem;
-    svg {
-      display: none;
-    }
   }
 
   &:hover {

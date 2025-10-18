@@ -10,38 +10,63 @@ const Contact = () => {
   const handleGmailIconClick = async () => {
     return (window.location.href = `mailto:${email}`);
   };
+
   const { t } = useTranslation();
 
   return (
     <Container id='contact'>
-      <h2>{t('home:contactWay')}</h2>
-      <p className='paragraph'>{t('home:contactDesc')}</p>
-      <ContactWay>
-        <DataCard hover={wppColor} href='https://contate.me/eric-camargo'>
-          <div className='iconConteiner'>
-            <SiWhatsapp />
-          </div>
-          <p>(15) 997284066</p>
-        </DataCard>
-        <DataCard hover={linkedin} href='https://www.linkedin.com/in/ericdellaicamargo/'>
-          <div className='iconConteiner'>
-            <SiLinkedin />
-          </div>
-          <p>Eric Camargo</p>
-        </DataCard>
-        <DataCard hover={instagram} href='https://www.instagram.com/dellaicamargo/'>
-          <div className='iconConteiner'>
-            <SiInstagram className='gradient' />
-          </div>
-          <p className='insta'>@dellaicamargo</p>
-        </DataCard>
-        <DataCard onClick={handleGmailIconClick} hover={gmail}>
-          <div className='iconConteiner'>
-            <SiGmail />
-          </div>
-          <p>ericdcamargo</p>
-        </DataCard>
-      </ContactWay>
+      <ContentWrapper>
+        <TextContainer>
+          <h2>{t('home:contactWay')}</h2>
+          <p className='paragraph'>{t('home:contactDesc')}</p>
+        </TextContainer>
+        <ContactWay>
+          <DataCard hover={wppColor} href='https://contate.me/eric-camargo' target='_blank'>
+            <div className='iconContainer'>
+              <SiWhatsapp />
+            </div>
+            <div>
+              <h4>WhatsApp</h4>
+              <p>(15) 99728-4066</p>
+            </div>
+          </DataCard>
+          <DataCard
+            hover={linkedin}
+            href='https://www.linkedin.com/in/ericdellaicamargo/'
+            target='_blank'
+          >
+            <div className='iconContainer'>
+              <SiLinkedin />
+            </div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>/ericdellaicamargo</p>
+            </div>
+          </DataCard>
+          <DataCard
+            hover={instagram}
+            href='https://www.instagram.com/dellaicamargo/'
+            target='_blank'
+          >
+            <div className='iconContainer'>
+              <SiInstagram className='gradient' />
+            </div>
+            <div>
+              <h4>Instagram</h4>
+              <p className='insta'>@dellaicamargo</p>
+            </div>
+          </DataCard>
+          <DataCard onClick={handleGmailIconClick} hover={gmail}>
+            <div className='iconContainer'>
+              <SiGmail />
+            </div>
+            <div>
+              <h4>E-mail</h4>
+              <p>ericdcamargo</p>
+            </div>
+          </DataCard>
+        </ContactWay>
+      </ContentWrapper>
     </Container>
   );
 };
@@ -53,66 +78,100 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10px;
-  padding: 20px;
   background-color: ${colors.black};
   z-index: 1;
+  width: 100%;
+  padding: 100px 20px;
+  min-height: 70vh;
+`;
+
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+`;
+
+const TextContainer = styled.div`
+  text-align: center;
+  max-width: 600px;
 
   h2 {
     color: ${colors.white};
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .paragraph {
-    color: ${colors.white};
-    text-align: center;
-    margin-bottom: 30px;
+    color: ${colors.gray};
+    font-size: 1.1rem;
+    line-height: 1.6;
   }
 `;
+
 const ContactWay = styled.section`
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
 `;
 
-const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
+const DataCard = styled.a<{ hover?: string }>`
   display: flex;
   text-decoration: none;
   align-items: center;
-  column-gap: 10px;
-  padding: 0 10px;
-  width: 250px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  height: 80px;
-  border-radius: 100px;
+  gap: 20px;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
   color: ${colors.white};
   background: ${colors.softBlack};
   cursor: pointer;
-  justify-content: center;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.3s ease-in-out;
 
-  .iconConteiner {
-    font-size: 1.5rem;
-    border: solid 2px ${colors.white};
-    width: 3rem;
-    height: 3rem;
+  div:last-child {
+    text-align: left;
+  }
+
+  h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    color: ${colors.white};
+  }
+
+  p {
+    margin: 0;
+    color: ${colors.gray};
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .iconContainer {
+    font-size: 1.8rem;
+    background-color: ${colors.softBlack2};
+    min-width: 60px;
+    height: 60px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    display: flex;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
   }
 
   &:hover {
-    color: ${({ hover }) => hover};
-    .iconConteiner {
-      border: solid 2px ${({ hover }) => hover};
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+
+    .iconContainer {
+      background-color: ${({ hover }) => hover};
+      color: ${colors.white};
     }
 
     .insta {
-      background-color: red;
       background-image: radial-gradient(
         circle at 30% 107%,
         #fdf497 0%,
@@ -121,15 +180,9 @@ const DataCard = styled.a<{ hover?: string; insta?: boolean }>`
         #d6249f 60%,
         #285aeb 90%
       );
-
-      background-size: 100%;
-      background-repeat: repeat;
-
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      -moz-background-clip: text;
-      -moz-text-fill-color: transparent;
     }
   }
 `;

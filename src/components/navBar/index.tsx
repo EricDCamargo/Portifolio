@@ -12,7 +12,6 @@ import { SiGmail, SiWhatsapp } from 'react-icons/si';
 import { useActiveSection } from '@shared/hooks/useActiveSection';
 
 export const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const { activeSection, setActiveSection } = useActiveSection();
   const [indicatorStyle, setIndicatorStyle] = useState({});
@@ -25,15 +24,6 @@ export const NavBar = () => {
   const handleGmailIconClick = async () => {
     return (window.location.href = `mailto:${gmail}`);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     const elementId = `#${activeSection}`;

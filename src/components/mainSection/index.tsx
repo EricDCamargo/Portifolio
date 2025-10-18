@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { SVGs } from '@src/assets';
-import Resume from '@src/shared/assets/Eric Dellai Camargo.pdf';
+import Resume from '@src/shared/assets/CV_Eric_Camargo_Desenvolvedor_FullStack.pdf';
 import { colors } from '@src/shared/themes/colors';
 import { ageCalc, smoothScroll } from '@src/shared/utils/functions';
 import { fontSize } from '@src/shared/themes/fonts';
@@ -30,7 +30,7 @@ const MainSection = () => {
   const handleResumeDownload = () => {
     const link = document.createElement('a');
     link.href = Resume;
-    link.download = 'Eric Dellai Camargo - Desenvolvedor Full Stack.pdf';
+    link.download = 'CV_Eric_Camargo_Desenvolvedor_FullStack.pdf';
     link.click();
     document.body.removeChild(link);
   };

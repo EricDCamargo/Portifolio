@@ -2,27 +2,69 @@ import { SVGs } from '@src/assets';
 import useWindowSize from '@src/shared/hooks/getWindowSize';
 import { colors } from '@src/shared/themes/colors';
 import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { BsLinkedin } from 'react-icons/bs';
 import styled from 'styled-components';
 import { Hamburguer } from '../../shared/components/hamburguer';
 import { SiGmail, SiWhatsapp } from 'react-icons/si';
+import { useActiveSection } from '@shared/hooks/useActiveSection';
 
 export const NavBar = () => {
-  const gmail = 'ericdcamargo@gmail.com';
-  const size = useWindowSize();
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const { i18n, t } = useTranslation();
+  const { activeSection, setActiveSection } = useActiveSection();
+  const [indicatorStyle, setIndicatorStyle] = useState({});
 
+  const size = useWindowSize();
+  const { i18n, t } = useTranslation();
   const { brazil, usa } = SVGs;
+
+  const gmail = 'ericdcamargo@gmail.com';
   const handleGmailIconClick = async () => {
     return (window.location.href = `mailto:${gmail}`);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const elementId = `#${activeSection}`;
+    const activeLink = document.querySelector<HTMLAnchorElement>(`a[href='${elementId}']`);
+    if (activeLink) {
+      setIndicatorStyle({
+        left: activeLink.offsetLeft,
+        width: activeLink.offsetWidth,
+      });
+    }
+  }, [activeSection, size.width]);
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+
+    setActiveSection(elementId);
+    smoothScroll(e, elementId);
+    setIsMenuOpen(false);
+  };
+
+  const navItems = [
+    { label: t('home:home'), id: '#home' },
+    { label: t('home:about'), id: '#about' },
+    { label: t('home:experience'), id: '#experience' },
+    { label: t('home:contact'), id: '#contact' },
+  ];
+
   return (
     <Container>
-      <Logo>
+      <Logo onClick={(e) => handleNavClick(e as any, 'home')}>
         <LogoTitle size={35} color={colors.white}>
           Eric
         </LogoTitle>
@@ -30,12 +72,26 @@ export const NavBar = () => {
           .dev
         </LogoTitle>
       </Logo>
+
       <Sections>
-        <Section onClick={(e) => smoothScroll(e, 'home')}>{t('home:home')}</Section>
-        <Section onClick={(e) => smoothScroll(e, 'about')}>{t('home:about')}</Section>
-        <Section onClick={(e) => smoothScroll(e, 'experience')}>{t('home:experience')}</Section>
-        <Section onClick={(e) => smoothScroll(e, 'contact')}>{t('home:contact')}</Section>
+        {navItems.map((item) => {
+          const sectionId = item.id.replace('#', '');
+          const isActive = activeSection === sectionId;
+
+          return (
+            <Section
+              key={item.id}
+              href={item.id}
+              isActive={isActive}
+              onClick={(e) => handleNavClick(e, item.id)}
+            >
+              {item.label}
+            </Section>
+          );
+        })}
+        <ActiveLinkIndicator style={indicatorStyle} />
       </Sections>
+
       <Links>
         <Icons>
           <a href='https://contate.me/eric-camargo' target='_blank'>
@@ -65,6 +121,7 @@ export const NavBar = () => {
           />
         </Icons>
       </Links>
+
       {size.width < 1000 && (
         <HamburguerMenuArea>
           <RxHamburgerMenu
@@ -108,6 +165,7 @@ const Logo = styled.div`
   justify-content: center;
   align-items: center;
   min-width: fit-content;
+  cursor: pointer;
 `;
 
 const LogoTitle = styled.label<{ color: string; size: number }>`
@@ -134,32 +192,46 @@ const Links = styled.div`
 `;
 
 const Sections = styled.div`
+  position: relative;
   display: flex;
-  column-gap: 20px;
-  font-family: 'Dosis', sans-serif;
-  :hover {
-    color: ${colors.black};
-    background-color: ${colors.white};
-    transform: scale(1.2);
-    box-shadow: 0px 0px 10px 0px white;
-  }
+  align-items: center;
+  gap: 10px;
+  background-color: ${colors.softBlack2};
+  padding: 8px;
+  border-radius: 999px;
+
   @media (max-width: 999px) {
     display: none;
   }
 `;
 
-const Section = styled.a`
+const ActiveLinkIndicator = styled.div`
+  position: absolute;
+  height: calc(100% - 16px);
+  top: 8px;
+  left: 0;
+  background-color: ${colors.pink};
+  border-radius: 999px;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+`;
+
+const Section = styled.a<{ isActive?: boolean }>`
   text-decoration: none;
-  color: ${colors.white};
-  transition: 0.5s;
-  height: 50px;
-  width: 100px;
-  border-radius: 60px;
+  color: ${({ isActive }) => (isActive ? colors.white : colors.gray)};
+  font-weight: ${({ isActive }) => (isActive ? '600' : '500')};
+  transition: color 0.3s ease-in-out;
+  padding: 8px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.black};
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+  &:hover {
+    color: ${colors.white};
+  }
 
   @media (max-width: 1000px) {
     font-size: 22px;
@@ -169,13 +241,13 @@ const Section = styled.a`
 const Icons = styled.div`
   display: flex;
   column-gap: 15px;
-  display: flex;
 
   .flag {
     cursor: pointer;
     width: 30px;
     height: 20px;
   }
+
   .icon {
     color: ${colors.white};
     cursor: pointer;
@@ -184,21 +256,17 @@ const Icons = styled.div`
       transform: scale(1.1);
     }
   }
-  .iconWpp {
-    &:hover {
-      color: ${colors.wppColor};
-    }
-  }
-  .iconLinkedin {
-    &:hover {
-      color: ${colors.linkedin};
-    }
+
+  .iconWpp:hover {
+    color: ${colors.wppColor};
   }
 
-  .iconGmail {
-    &:hover {
-      color: ${colors.gmail};
-    }
+  .iconLinkedin:hover {
+    color: ${colors.linkedin};
+  }
+
+  .iconGmail:hover {
+    color: ${colors.gmail};
   }
 `;
 

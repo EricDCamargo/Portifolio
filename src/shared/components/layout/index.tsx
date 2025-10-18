@@ -20,7 +20,7 @@ const Grid = styled.div`
   display: grid;
   background-color: ${colors.black};
   grid-template-columns: 100%;
-  grid-template-rows: 118px auto;
+  grid-template-rows: 120px auto;
   grid-template-areas:
     'NB'
     'CT';

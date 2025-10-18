@@ -49,6 +49,13 @@
     "CompanyIV": "Parque Tecnológico de Sorocaba",
     "ExperienceIV": "Desenvolvedor Full-Stack Aprendiz",
     "PeriodIV": "Ago 2022 – Nov 2022",
-    "DescriptionIV": "Desenvolvi um aplicativo móvel para a APAE Sorocaba com foco em arrecadação de doações e campanhas sociais, conectando a população à instituição. A solução digital resultou em um aumento de mais de 40% nas doações recebidas, conectando de forma mais eficiente a população à instituição."
+    "DescriptionIV": "Desenvolvi um aplicativo móvel para a APAE Sorocaba com foco em arrecadação de doações e campanhas sociais, conectando a população à instituição. A solução digital resultou em um aumento de mais de 40% nas doações recebidas, conectando de forma mais eficiente a população à instituição.",
+
+    "aboutTeaser": "Apaixonado por tecnologia e movido pelo desafio de criar soluções que fazem a diferença. Com {{age}} anos, minha jornada no mundo do desenvolvimento começou com a curiosidade e rapidamente se tornou uma carreira focada em construir aplicações eficientes e intuitivas.",
+    "myJourneyTitle": "Minha Trajetória",
+    "myJourneyText": "Vindo de uma base sólida em suporte de TI, fiz a transição para o desenvolvimento de software para poder criar as soluções do zero. A graduação em Análise e Desenvolvimento de Sistemas pela FATEC foi o catalisador que consolidou minha paixão e conhecimento.",
+    "whatIDoTitle": "O Que Eu Faço",
+    "whatIDoText": "Hoje, meu foco é desenvolver aplicações completas, do front-end com React ao back-end com Node.js. Tenho experiência na criação de sistemas interativos, APIs robustas e na entrega de projetos que proporcionam uma ótima experiência ao usuário.",
+    "mainToolsTitle": "Principais Ferramentas"
   }
 }

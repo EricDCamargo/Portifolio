@@ -49,6 +49,13 @@
     "CompanyIV": "Sorocaba Technology Park",
     "ExperienceIV": "Full-Stack Developer Apprentice",
     "PeriodIV": "Aug 2022 – Nov 2022",
-    "DescriptionIV": "Developed a mobile application for APAE Sorocaba focused on fundraising and social campaigns, connecting the community to the institution. The digital solution resulted in an increase of over 40% in donations received, connecting the community to the institution more efficiently."
+    "DescriptionIV": "Developed a mobile application for APAE Sorocaba focused on fundraising and social campaigns, connecting the community to the institution. The digital solution resulted in an increase of over 40% in donations received, connecting the community to the institution more efficiently.",
+
+    "aboutTeaser": "Passionate about technology and driven by the challenge of creating solutions that make a difference. At {{age}} years old, my journey into the world of development began with curiosity and quickly became a career focused on building efficient and intuitive applications.",
+    "myJourneyTitle": "My Journey",
+    "myJourneyText": "Coming from a solid background in IT support, I transitioned to software development to be able to create solutions from scratch. Graduating in Systems Analysis and Development from FATEC was the catalyst that solidified my passion and knowledge.",
+    "whatIDoTitle": "What I Do",
+    "whatIDoText": "Today, my focus is on developing complete applications, from the front-end with React to the back-end with Node.js. I have experience creating interactive systems, robust APIs, and delivering projects that provide a great user experience.",
+    "mainToolsTitle": "Main Tools"
   }
 }

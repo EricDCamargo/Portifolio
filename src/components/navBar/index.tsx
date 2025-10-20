@@ -36,7 +36,10 @@ export const NavBar = () => {
     }
   }, [activeSection, size.width]);
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>,
+    href: string,
+  ) => {
     e.preventDefault();
     const elementId = href.replace('#', '');
 
@@ -49,12 +52,13 @@ export const NavBar = () => {
     { label: t('home:home'), id: '#home' },
     { label: t('home:about'), id: '#about' },
     { label: t('home:experience'), id: '#experience' },
+    { label: t('home:project'), id: '#project' },
     { label: t('home:contact'), id: '#contact' },
   ];
 
   return (
     <Container>
-      <Logo onClick={(e) => handleNavClick(e as any, 'home')}>
+      <Logo onClick={(e) => handleNavClick(e, 'home')}>
         <LogoTitle size={35} color={colors.white}>
           Eric
         </LogoTitle>

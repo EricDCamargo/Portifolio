@@ -1,83 +1,75 @@
-import { FaBuilding } from 'react-icons/fa';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
 import { ExperiencesData } from '@src/shared/helpers/experienceData';
 import { TechButton } from '@shared/components/techButton/TechButton';
 import { useTranslation } from 'react-i18next';
 import styled from 'styled-components';
 import { colors } from '@src/shared/themes/colors';
-import { ageCalc } from '@src/shared/utils/functions';
 
 export const Experience = () => {
   const { t } = useTranslation();
 
   return (
     <Section id='experience'>
-      <Container>
-        <Header>
-          <Title>{t('home:experience')}</Title>
-          <Subtitle>{t('home:experienceIntro')}</Subtitle>
-        </Header>
-        <Timeline>
-          <TimelineLine />
-          <Cards>
-            {ExperiencesData.map((exp, idx) => (
-              <CardWrapper key={exp.id}>
-                <TimelineDot current={t(exp.period).includes(t('home:current'))} />
-                <ExperienceCard>
-                  <CardHeader>
-                    <CardHeaderColumn>
-                      <Position>{t(exp.ocupation)}</Position>
-                      <CompanyRow>
-                        <LogoImg src={exp.logo} alt={t(exp.company)} />
-                        <Company>{t(exp.company)}</Company>
-                        {t(exp.period).includes(t('home:current')) && (
-                          <Badge>{t('home:current')}</Badge>
-                        )}
-                      </CompanyRow>
-                    </CardHeaderColumn>
-                    <CardHeaderColumn>
-                      <InfoRow>
-                        <FiCalendar />
-                        <span>{t(exp.period)}</span>
-                      </InfoRow>
-
-                      {exp.location && (
-                        <InfoRow>
-                          <FiMapPin />
-                          <span>
-                            {exp.location} {exp.type && `- ${t(exp.type)}`}
-                          </span>
-                        </InfoRow>
+      <Header>
+        <Title>{t('home:experience')}</Title>
+        <Subtitle>{t('home:experienceIntro')}</Subtitle>
+      </Header>
+      <Timeline>
+        <TimelineLine />
+        <Cards>
+          {ExperiencesData.map((exp, idx) => (
+            <CardWrapper key={exp.id}>
+              <TimelineDot current={t(exp.period).includes(t('home:current'))} />
+              <ExperienceCard>
+                <CardHeader>
+                  <CardHeaderColumn>
+                    <Position>{t(exp.ocupation)}</Position>
+                    <CompanyRow>
+                      <LogoImg src={exp.logo} alt={t(exp.company)} />
+                      <Company>{t(exp.company)}</Company>
+                      {t(exp.period).includes(t('home:current')) && (
+                        <Badge>{t('home:current')}</Badge>
                       )}
-                    </CardHeaderColumn>
-                  </CardHeader>
-                  <Description>{t(exp.description)}</Description>
-                  <SkillsTitle>{t('home:mainTechnologies')} </SkillsTitle>
-                  <Skills>
-                    {exp.techs.map((tech) => (
-                      <TechButton name={tech} key={tech} />
-                    ))}
-                  </Skills>
-                </ExperienceCard>
-              </CardWrapper>
-            ))}
-          </Cards>
-        </Timeline>
-      </Container>
+                    </CompanyRow>
+                  </CardHeaderColumn>
+                  <CardHeaderColumn>
+                    <InfoRow>
+                      <FiCalendar />
+                      <span>{t(exp.period)}</span>
+                    </InfoRow>
+
+                    {exp.location && (
+                      <InfoRow>
+                        <FiMapPin />
+                        <span>
+                          {exp.location} {exp.type && `- ${t(exp.type)}`}
+                        </span>
+                      </InfoRow>
+                    )}
+                  </CardHeaderColumn>
+                </CardHeader>
+                <Description>{t(exp.description)}</Description>
+                <SkillsTitle>{t('home:mainTechnologies')} </SkillsTitle>
+                <Skills>
+                  {exp.techs.map((tech) => (
+                    <TechButton name={tech} key={tech} />
+                  ))}
+                </Skills>
+              </ExperienceCard>
+            </CardWrapper>
+          ))}
+        </Cards>
+      </Timeline>
     </Section>
   );
 };
 
 export default Experience;
 const Section = styled.section`
-  padding: 4rem 0;
-  width: 100%;
-`;
-
-const Container = styled.div`
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
 `;
 
 const Header = styled.div`
@@ -137,7 +129,7 @@ const ExperienceCard = styled.div`
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
   padding: 2rem;
   background: ${colors.softBlack2};
-  border: 1px solid white;
+  border: 1px solid ${colors.white};
   color: ${colors.white};
   transition: all 0.5s;
   cursor: pointer;

@@ -10,7 +10,7 @@ const Footer = () => {
   const { i18n } = useTranslation();
 
   return (
-    <Content>
+    <Content id='footer'>
       <BiCopyright color={colors.white} />
       <p>Copyright - Eric Dellai Camargo - {t('home:rightsReserved')}</p>
       <img src={i18n.language === 'ptBR' ? brazil : usa} alt='Country flag' />
@@ -19,7 +19,7 @@ const Footer = () => {
 };
 export default Footer;
 
-const Content = styled.div`
+const Content = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;

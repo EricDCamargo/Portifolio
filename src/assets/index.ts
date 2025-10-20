@@ -9,6 +9,8 @@ import freelancer from '@assets/freelancer.svg';
 import diebold from '@assets/diebold.svg';
 import epiousion from '@assets/epiousion.svg';
 import pts from '@assets/pts.svg';
+import PedidoFacil from '@assets/projectsPics/Pedido_Facil.png';
+import SysNevent from '@assets/projectsPics/SysNevent.png';
 
 export const SVGs = {
   techAnimation,
@@ -22,4 +24,6 @@ export const SVGs = {
   diebold,
   epiousion,
   pts,
+  PedidoFacil,
+  SysNevent,
 };

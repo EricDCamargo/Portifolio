@@ -43,7 +43,7 @@ const About = () => {
   };
 
   return (
-    <Container id='about'>
+    <Section id='about'>
       <ContentWrapper>
         <TextSection>
           <h2>{t('home:about')}</h2>
@@ -71,16 +71,15 @@ const About = () => {
           </ToolsList>
         </HighlightsSection>
       </ContentWrapper>
-    </Container>
+    </Section>
   );
 };
 
 export default About;
 
-const Container = styled.section`
+const Section = styled.section`
   background-color: ${colors.softBlack};
   width: 100%;
-  padding: 80px 40px;
   display: flex;
   justify-content: center;
   border-top: 1px solid ${colors.softBlack2};

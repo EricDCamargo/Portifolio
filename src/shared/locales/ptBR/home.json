@@ -51,6 +51,18 @@
     "PeriodIV": "Ago 2022 – Nov 2022",
     "DescriptionIV": "Desenvolvi um aplicativo móvel para a APAE Sorocaba com foco em arrecadação de doações e campanhas sociais, conectando a população à instituição. A solução digital resultou em um aumento de mais de 40% nas doações recebidas, conectando de forma mais eficiente a população à instituição.",
 
+    "project": "Projetos",
+    "projectsIntro": "Aqui estão alguns dos projetos em que trabalhei, demonstrando minhas habilidades em desenvolvimento full-stack e minha paixão por criar soluções eficientes e modernas.",
+
+    "projectOneTitle": "Pedido Fácil - Sistema de Ponto de Venda (PDV)",
+    "projectOneDescription": "Solução full-stack completa para gestão de restaurantes, composta por uma API RESTful em Node.js com Prisma e PostgreSQL, um aplicativo móvel em React Native para garçons e um dashboard web em Next.js para administração. O sistema gerencia mesas, pedidos e pagamentos em tempo real com Socket.io, e inclui integração com impressoras térmicas.",
+
+    "projectTwoTitle": "SysNevent - Plataforma de Eventos",
+    "projectTwoDescription": "Plataforma de microserviços para gestão de eventos, incluindo venda de ingressos, check-in por QR code e comunicação em tempo real entre organizadores.",
+
+    "projectThreeTitle": "Portfólio Pessoal",
+    "projectThreeDescription": "O site que você está vendo agora! Construído com React, TypeScript e Styled-Components para criar uma experiência de usuário moderna e fluida.",
+
     "aboutTeaser": "Apaixonado por tecnologia e movido pelo desafio de criar soluções que fazem a diferença. Com {{age}} anos, minha jornada no mundo do desenvolvimento começou com a curiosidade e rapidamente se tornou uma carreira focada em construir aplicações eficientes e intuitivas.",
     "myJourneyTitle": "Minha Trajetória",
     "myJourneyText": "Vindo de uma base sólida em suporte de TI, fiz a transição para o desenvolvimento de software para poder criar as soluções do zero. A graduação em Análise e Desenvolvimento de Sistemas pela FATEC foi o catalisador que consolidou minha paixão e conhecimento.",

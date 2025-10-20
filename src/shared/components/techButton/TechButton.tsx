@@ -1,5 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
+import { colors } from '@src/shared/themes/colors';
 import { DiJavascript, DiMysql, DiScrum } from 'react-icons/di';
+import { BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
+import { BiMobile } from 'react-icons/bi';
+import { RiComputerFill } from 'react-icons/ri';
 import {
   FaAws,
   FaBootstrap,
@@ -17,6 +22,26 @@ import {
   FaServer,
   FaCloud,
 } from 'react-icons/fa';
+
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiJsonwebtokens,
+  SiReacthookform,
+  SiZod,
+  SiStyledcomponents,
+  SiPrisma,
+  SiPostgresql,
+  SiFirebase,
+  SiRabbitmq,
+  SiTailwindcss,
+  SiMui,
+  SiAxios,
+  SiSocketdotio,
+  SiWebpack,
+  SiWordpress,
+} from 'react-icons/si';
 
 export type NameTechs =
   | 'JavaScript'
@@ -60,7 +85,7 @@ export type NameTechs =
   | 'Software'
   | 'Hardware';
 
-export interface TechButtonProps {
+export interface TechButtonProps extends React.HTMLAttributes<HTMLLIElement> {
   name: NameTechs;
 }
 
@@ -111,39 +136,14 @@ const TechsIcons: TechsIconsProps = {
   Software: <RiComputerFill />,
 };
 
-export const TechButton = ({ name }: TechButtonProps) => {
+export const TechButton = ({ name, ...props }: TechButtonProps) => {
   return (
-    <TechButtonContainer>
+    <TechButtonContainer {...props}>
       {TechsIcons[name] || null}
       <span>{name}</span>
     </TechButtonContainer>
   );
 };
-
-import styled from 'styled-components';
-import { colors } from '@src/shared/themes/colors';
-import { BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
-import {
-  SiTypescript,
-  SiNextdotjs,
-  SiExpress,
-  SiJsonwebtokens,
-  SiReacthookform,
-  SiZod,
-  SiStyledcomponents,
-  SiPrisma,
-  SiPostgresql,
-  SiFirebase,
-  SiRabbitmq,
-  SiTailwindcss,
-  SiMui,
-  SiAxios,
-  SiSocketdotio,
-  SiWebpack,
-  SiWordpress,
-} from 'react-icons/si';
-import { BiMobile } from 'react-icons/bi';
-import { RiComputerFill } from 'react-icons/ri';
 
 export const TechButtonContainer = styled.li`
   display: flex;
@@ -155,9 +155,19 @@ export const TechButtonContainer = styled.li`
   width: fit-content;
   font-weight: bold;
   cursor: pointer;
+  color: ${colors.white};
+  transition: background-color 0.3s ease;
 
   svg {
     width: 20px;
+    height: auto;
+  }
+  span {
+    white-space: nowrap;
+  }
+
+  &:hover {
+    background: ${colors.pink};
   }
 
   @media (max-width: 1200px) {
@@ -171,9 +181,5 @@ export const TechButtonContainer = styled.li`
     padding: 0;
     align-items: center;
     justify-content: center;
-  }
-
-  &:hover {
-    background: ${colors.pink};
   }
 `;

@@ -45,4 +45,13 @@ const Content = styled.div`
   overflow: auto;
   overflow-x: hidden;
   grid-template-columns: unset;
+  gap: 4rem;
+
+  section {
+    padding: 2rem;
+
+    @media screen and (max-width: 425px) {
+      padding: 2rem 1rem;
+    }
+  }
 `;

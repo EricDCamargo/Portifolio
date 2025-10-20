@@ -36,8 +36,8 @@ const MainSection = () => {
   };
 
   return (
-    <Container id='home'>
-      <section className='home'>
+    <Section id='home'>
+      <div className='home'>
         <HomeText className='home-text'>
           <span>{t('home:SoftwareDeveloper')}</span>
           <h1>Eric Dellai Camargo</h1>
@@ -46,7 +46,7 @@ const MainSection = () => {
             <div onClick={() => handleResumeDownload()} className='bnt'>
               {t('home:DownloadCV')}
             </div>
-            <div onClick={(e) => smoothScroll(e, 'projects')} className='bnt two'>
+            <div onClick={(e) => smoothScroll(e, 'project')} className='bnt two'>
               {t('home:MyProjects')}
             </div>
           </MainButton>
@@ -63,22 +63,20 @@ const MainSection = () => {
             </a>
           </Social>
         </Share>
-      </section>
+      </div>
       <HomeImage className='home-img'>
         <img src={photoWithoutBack} />
       </HomeImage>
-    </Container>
+    </Section>
   );
 };
 
 export default MainSection;
 
-const Container = styled.div`
+const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100vh;
-  width: 100%;
   margin-top: 60px;
 
   @media (max-width: 800px) {

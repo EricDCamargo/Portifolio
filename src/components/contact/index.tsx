@@ -14,7 +14,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
-    <Container id='contact'>
+    <Section id='contact'>
       <ContentWrapper>
         <TextContainer>
           <h2>{t('home:contactWay')}</h2>
@@ -67,22 +67,19 @@ const Contact = () => {
           </DataCard>
         </ContactWay>
       </ContentWrapper>
-    </Container>
+    </Section>
   );
 };
 
 export default Contact;
 
-const Container = styled.div`
+const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: ${colors.black};
-  z-index: 1;
   width: 100%;
-  padding: 100px 20px;
-  min-height: 70vh;
 `;
 
 const ContentWrapper = styled.div`

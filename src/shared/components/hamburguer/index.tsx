@@ -20,13 +20,32 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
   const { t, i18n } = useTranslation();
 
   const { brazil, usa } = SVGs;
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const elementId = href.replace('#', '');
+
+    smoothScroll(e, elementId);
+    setIsMenuOpen(false);
+  };
+
+  const navItems = [
+    { label: t('home:home'), id: '#home' },
+    { label: t('home:about'), id: '#about' },
+    { label: t('home:experience'), id: '#experience' },
+    { label: t('home:project'), id: '#project' },
+    { label: t('home:contact'), id: '#contact' },
+  ];
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      <Section onClick={(e) => smoothScroll(e, 'home')}>{t('home:home')}</Section>
-      <Section onClick={(e) => smoothScroll(e, 'about')}>{t('home:about')}</Section>
-      <Section onClick={(e) => smoothScroll(e, 'experience')}>{t('home:experience')}</Section>
-      <Section onClick={(e) => smoothScroll(e, 'contact')}>{t('home:contact')}</Section>
+      {navItems.map((item) => {
+        return (
+          <Section key={item.id} href={item.id} onClick={(e) => handleNavClick(e, item.id)}>
+            {item.label}
+          </Section>
+        );
+      })}
       <Icons>
         <a href='https://contate.me/eric-camargo' target='_blank'>
           <SiWhatsapp size={18} className='icon iconWpp' />

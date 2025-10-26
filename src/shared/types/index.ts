@@ -11,3 +11,18 @@ export interface ExperienceProps {
   description: string;
   techs: NameTechs[];
 }
+
+export interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  techs: NameTechs[];
+  liveUrl?: string;
+  repoUrl?: string;
+}
+
+export interface SectionProps {
+  id: string;
+  label: string;
+}

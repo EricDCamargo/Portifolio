@@ -1,6 +1,7 @@
 import { SVGs } from '@src/assets';
+import { sections } from '@src/shared/helpers/sectionsData';
 import { colors } from '@src/shared/themes/colors';
-import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions';
+import { changeAppLanguage, handleGmailIconClick, smoothScroll } from '@src/shared/utils/functions';
 import { Dispatch, SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si';
@@ -11,38 +12,23 @@ interface Props {
 }
 
 export const Hamburguer = ({ setIsMenuOpen }: Props) => {
-  const gmail = 'ericdcamargo@gmail.com';
-
-  const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${gmail}`);
-  };
-
   const { t, i18n } = useTranslation();
 
   const { brazil, usa } = SVGs;
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const elementId = href.replace('#', '');
-
-    smoothScroll(e, elementId);
-    setIsMenuOpen(false);
-  };
-
-  const navItems = [
-    { label: t('home:home'), id: '#home' },
-    { label: t('home:about'), id: '#about' },
-    { label: t('home:experience'), id: '#experience' },
-    { label: t('home:project'), id: '#project' },
-    { label: t('home:contact'), id: '#contact' },
-  ];
   return (
     <HamburguerItems>
       <HamburguerDetail />
-      {navItems.map((item) => {
+      {sections.map((section) => {
         return (
-          <Section key={item.id} href={item.id} onClick={(e) => handleNavClick(e, item.id)}>
-            {item.label}
+          <Section
+            key={section.id}
+            href={section.id}
+            onClick={(e) => {
+              (smoothScroll(e, section.id), setIsMenuOpen(false));
+            }}
+          >
+            {t(section.label)}
           </Section>
         );
       })}
@@ -53,7 +39,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
         <a href='https://www.linkedin.com/in/ericdellaicamargo/' target='_blank'>
           <SiLinkedin size={18} className='icon iconLinkedin' />
         </a>
-        <SiGmail size={18} className='icon iconGmail' onClick={handleGmailIconClick} />
+        <SiGmail size={18} className='icon iconGmail' href={handleGmailIconClick} />
       </Icons>
       <Icons>
         <img

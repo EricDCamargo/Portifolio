@@ -1,14 +1,20 @@
 import moment from 'moment';
 
-export const changeAppLanguage = (lng: string) => {
+const changeAppLanguage = (lng: string) => {
   localStorage.setItem('i18nextLng', lng);
 };
-export const smoothScroll = (e: any, path: string) => {
-  let scroll = document.getElementById(path);
+const smoothScroll = (e: any, path: string) => {
+  const elementId = path.replace('#', '');
+  let scroll = document.getElementById(elementId);
   e.preventDefault();
   scroll && scroll.scrollIntoView({ behavior: 'smooth', block: 'start' });
 };
-export const ageCalc = () => {
+const ageCalc = () => {
   let bday = moment('2004-02-16', 'YYYY-MM-DD');
   return moment().diff(bday, 'years');
 };
+
+const gmail = 'ericdcamargo@gmail.com';
+const handleGmailIconClick: string = `mailto:${gmail}`;
+
+export { changeAppLanguage, smoothScroll, ageCalc, handleGmailIconClick };

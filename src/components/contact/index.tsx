@@ -1,15 +1,11 @@
 import { colors } from '@src/shared/themes/colors';
+import { handleGmailIconClick } from '@src/shared/utils/functions';
 import { useTranslation } from 'react-i18next';
 import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si';
 import styled from 'styled-components';
 
 const Contact = () => {
   const { wppColor, linkedin, gmail, instagram } = colors;
-  const email = 'ericdcamargo@gmail.com';
-
-  const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${email}`);
-  };
 
   const { t } = useTranslation();
 
@@ -56,7 +52,7 @@ const Contact = () => {
               <p className='insta'>@dellaicamargo</p>
             </div>
           </DataCard>
-          <DataCard onClick={handleGmailIconClick} hover={gmail}>
+          <DataCard href={handleGmailIconClick} hover={gmail}>
             <div className='iconContainer'>
               <SiGmail />
             </div>

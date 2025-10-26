@@ -55,13 +55,10 @@
     "projectsIntro": "Here are some of the projects I've worked on, showcasing my skills in full-stack development and my passion for creating efficient and modern solutions.",
 
     "projectOneTitle": "Pedido Fácil - Point of Sale (POS) System",
-    "projectOneDescription": "A comprehensive full-stack solution for restaurant management, featuring a RESTful API in Node.js with Prisma and PostgreSQL, a React Native mobile app for waiters, and a Next.js web dashboard for administration. The system manages tables, orders, and payments in real-time with Socket.io, and includes integration with thermal printers.",
+    "projectOneDescription": "Pedido Fácil is a full-stack, cross-platform Point of Sale (POS) solution designed to digitize and optimize restaurant management, from table service to closing the bill. Its architecture is supported by a robust RESTful API in Node.js/TypeScript (using PostgreSQL/Prisma ORM) and establishes real-time communication via Socket.io to synchronize operations between the mobile application (React Native) — dedicated to table management and order placement by waiters — and the administrative web dashboard (Next.js). The system covers user and product control, log monitoring, and payment management, standing out for advanced features like Partial Payment per Order functionality and native integration with Thermal Printers, ensuring agility throughout the operational flow.",
 
     "projectTwoTitle": "SysNevent - Event Platform",
-    "projectTwoDescription": "A microservices platform for event management, including ticket sales, QR code check-in, and real-time communication between organizers.",
-
-    "projectThreeTitle": "Personal Portfolio",
-    "projectThreeDescription": "The website you are currently viewing! Built with React, TypeScript, and Styled-Components to create a modern and fluid user experience.",
+    "projectTwoDescription": "The SysNevent project is a robust platform for the complete management of the academic event lifecycle, highlighted by its scalable architecture based on Microservices (Node.js/TypeScript) interacting through a central API Gateway, and a modern frontend built with Next.js/React. Key features include event creation and scheduling with date/location availability validation; an efficient participant registration system with automatic email confirmation; real-time Attendance List control via an administrative dashboard; and the ability to Generate Detailed Reports in PDF for analysis and certification, all secured by a Role-Based Access Control (RBAC) system that segregates permissions by user profile.",
 
     "aboutTeaser": "Passionate about technology and driven by the challenge of creating solutions that make a difference. At {{age}} years old, my journey into the world of development began with curiosity and quickly became a career focused on building efficient and intuitive applications.",
     "myJourneyTitle": "My Journey",

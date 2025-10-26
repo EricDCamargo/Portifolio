@@ -15,7 +15,7 @@ import {
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
 
-export interface Tool {
+interface Tool {
   name: string;
   Icon: IconType;
 }

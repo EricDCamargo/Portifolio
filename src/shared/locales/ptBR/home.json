@@ -55,13 +55,10 @@
     "projectsIntro": "Aqui estão alguns dos projetos em que trabalhei, demonstrando minhas habilidades em desenvolvimento full-stack e minha paixão por criar soluções eficientes e modernas.",
 
     "projectOneTitle": "Pedido Fácil - Sistema de Ponto de Venda (PDV)",
-    "projectOneDescription": "Solução full-stack completa para gestão de restaurantes, composta por uma API RESTful em Node.js com Prisma e PostgreSQL, um aplicativo móvel em React Native para garçons e um dashboard web em Next.js para administração. O sistema gerencia mesas, pedidos e pagamentos em tempo real com Socket.io, e inclui integração com impressoras térmicas.",
+    "projectOneDescription": "O Pedido Fácil é uma solução full-stack e multiplataforma, desenvolvida para digitalizar e otimizar a gestão de restaurantes, desde o atendimento à mesa até o fechamento da conta. Sua arquitetura é sustentada por uma API RESTful em Node.js/TypeScript (utilizando PostgreSQL/Prisma ORM) e estabelece comunicação em tempo real via Socket.io para sincronizar as operações entre o aplicativo móvel (React Native) — dedicado à gestão de mesas e lançamentos de pedidos pelos garçons — e o dashboard web administrativo (Next.js). O sistema abrange controle de usuários e produtos, acompanhamento de logs, e gerenciamento de pagamentos, destacando-se por recursos avançados como a funcionalidade de Pagamento Parcial por Pedido e a integração nativa com Impressoras Térmicas, garantindo agilidade em todo o fluxo operacional.",
 
     "projectTwoTitle": "SysNevent - Plataforma de Eventos",
-    "projectTwoDescription": "Plataforma de microserviços para gestão de eventos, incluindo venda de ingressos, check-in por QR code e comunicação em tempo real entre organizadores.",
-
-    "projectThreeTitle": "Portfólio Pessoal",
-    "projectThreeDescription": "O site que você está vendo agora! Construído com React, TypeScript e Styled-Components para criar uma experiência de usuário moderna e fluida.",
+    "projectTwoDescription": "O projeto SysNevent é uma plataforma robusta para a gestão completa do ciclo de vida de eventos acadêmicos, destacando-se por sua arquitetura escalável baseada em Microserviços (Node.js/TypeScript), que interagem através de um API Gateway central, e um frontend moderno construído com Next.js/React. As funcionalidades-chave incluem a criação e agendamento de eventos com validação de disponibilidade de datas/locais; um sistema eficiente de inscrição de participantes com envio automático de confirmação por e-mail; o controle em tempo real da Lista de Presença através de uma dashboard administrativa; e a capacidade de Geração de Relatórios detalhados em PDF para análise e certificação, tudo protegido por um sistema de Controle de Acesso (RBAC) que segrega permissões por perfil de usuário.",
 
     "aboutTeaser": "Apaixonado por tecnologia e movido pelo desafio de criar soluções que fazem a diferença. Com {{age}} anos, minha jornada no mundo do desenvolvimento começou com a curiosidade e rapidamente se tornou uma carreira focada em construir aplicações eficientes e intuitivas.",
     "myJourneyTitle": "Minha Trajetória",

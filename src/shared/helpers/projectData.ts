@@ -1,24 +1,26 @@
-import { SVGs } from '@src/assets';
-import { NameTechs } from '@src/shared/components/techButton/TechButton';
-
-export interface Project {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  techs: NameTechs[];
-  liveUrl?: string;
-  repoUrl?: string;
-}
-const { PedidoFacil, SysNevent } = SVGs;
+import { Project } from '../types';
 
 export const projectsData: Project[] = [
   {
     id: 1,
     title: 'home:projectOneTitle',
     description: 'home:projectOneDescription',
-    image: PedidoFacil,
-    techs: ['NextJs', 'ReactNative', 'NodeJs', 'TypeScript', 'PrismaORM', 'PostgreSQL', 'Docker'],
+    image:
+      'https://image.thum.io/get/fullpage/width/800/disable_animations/https://pedidofacil-front.vercel.app/',
+    techs: [
+      'NextJs',
+      'ReactNative',
+      'NodeJs',
+      'Express',
+      'TypeScript',
+      'PrismaORM',
+      'PostgreSQL',
+      'Cloudinary',
+      'Socketio',
+      'Docker',
+      'Figma',
+      'JWT',
+    ],
     repoUrl: 'https://github.com/EricDCamargo/pedidofacil_front',
     liveUrl: 'https://pedidofacil-front.vercel.app/',
   },
@@ -26,7 +28,8 @@ export const projectsData: Project[] = [
     id: 2,
     title: 'home:projectTwoTitle',
     description: 'home:projectTwoDescription',
-    image: SysNevent,
+    image:
+      'https://image.thum.io/get/fullpage/width/800/disable_animations/https://agendafatecitu.vercel.app/auth/signin',
     techs: [
       'NextJs',
       'NodeJs',
@@ -36,6 +39,8 @@ export const projectsData: Project[] = [
       'Express',
       'Cloudinary',
       'Docker',
+      'Figma',
+      'JWT',
     ],
     repoUrl: 'https://github.com/EricDCamargo/sysnevent-frontend',
     liveUrl: 'https://agendafatecitu.vercel.app/',

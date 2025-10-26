@@ -1,7 +1,7 @@
 import { SVGs } from '@src/assets';
 import useWindowSize from '@src/shared/hooks/getWindowSize';
 import { colors } from '@src/shared/themes/colors';
-import { changeAppLanguage, smoothScroll } from '@src/shared/utils/functions';
+import { changeAppLanguage, handleGmailIconClick, smoothScroll } from '@src/shared/utils/functions';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RxHamburgerMenu } from 'react-icons/rx';
@@ -10,20 +10,16 @@ import styled from 'styled-components';
 import { Hamburguer } from '../../shared/components/hamburguer';
 import { SiGmail, SiWhatsapp } from 'react-icons/si';
 import { useActiveSection } from '@shared/hooks/useActiveSection';
+import { sections } from '@src/shared/helpers/sectionsData';
 
 export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const { activeSection, setActiveSection } = useActiveSection();
+  const { activeSection } = useActiveSection();
   const [indicatorStyle, setIndicatorStyle] = useState({});
 
   const size = useWindowSize();
   const { i18n, t } = useTranslation();
   const { brazil, usa } = SVGs;
-
-  const gmail = 'ericdcamargo@gmail.com';
-  const handleGmailIconClick = async () => {
-    return (window.location.href = `mailto:${gmail}`);
-  };
 
   useEffect(() => {
     const elementId = `#${activeSection}`;
@@ -36,50 +32,30 @@ export const NavBar = () => {
     }
   }, [activeSection, size.width]);
 
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement | HTMLDivElement>,
-    href: string,
-  ) => {
-    e.preventDefault();
-    const elementId = href.replace('#', '');
-
-    setActiveSection(elementId);
-    smoothScroll(e, elementId);
-    setIsMenuOpen(false);
-  };
-
-  const navItems = [
-    { label: t('home:home'), id: '#home' },
-    { label: t('home:about'), id: '#about' },
-    { label: t('home:experience'), id: '#experience' },
-    { label: t('home:project'), id: '#project' },
-    { label: t('home:contact'), id: '#contact' },
-  ];
-
   return (
     <Container>
-      <Logo onClick={(e) => handleNavClick(e, 'home')}>
+      <Logo onClick={(e) => smoothScroll(e, 'home')}>
         <LogoTitle size={35} color={colors.white}>
           Eric
         </LogoTitle>
         <LogoTitle size={35} color={colors.pink}>
-          .dev
+          _dev
         </LogoTitle>
       </Logo>
 
       <Sections>
-        {navItems.map((item) => {
-          const sectionId = item.id.replace('#', '');
+        {sections.map((section) => {
+          const sectionId = section.id.replace('#', '');
           const isActive = activeSection === sectionId;
 
           return (
             <Section
-              key={item.id}
-              href={item.id}
+              key={section.id}
+              href={section.id}
               isActive={isActive}
-              onClick={(e) => handleNavClick(e, item.id)}
+              onClick={(e) => smoothScroll(e, section.id)}
             >
-              {item.label}
+              {t(section.label)}
             </Section>
           );
         })}
@@ -91,7 +67,9 @@ export const NavBar = () => {
           <a href='https://contate.me/eric-camargo' target='_blank'>
             <SiWhatsapp size={18} className='icon iconWpp' />
           </a>
-          <SiGmail onClick={handleGmailIconClick} className='icon iconGmail' size={18} />
+          <a href={handleGmailIconClick} target='_blank'>
+            <SiGmail className='icon iconGmail' size={18} />
+          </a>
           <a href='https://www.linkedin.com/in/ericdellaicamargo/' target='_blank'>
             <BsLinkedin className='icon iconLinkedin' size={18} />
           </a>
@@ -170,7 +148,7 @@ const LogoTitle = styled.label<{ color: string; size: number }>`
   cursor: pointer;
 
   &:hover {
-    color: ${colors.purple};
+    color: ${colors.pink};
     transform: scale(1.1);
   }
 `;
@@ -213,7 +191,7 @@ const ActiveLinkIndicator = styled.div`
 const Section = styled.a<{ isActive?: boolean }>`
   text-decoration: none;
   color: ${({ isActive }) => (isActive ? colors.white : colors.gray)};
-  font-weight: ${({ isActive }) => (isActive ? '600' : '500')};
+  font-weight: ${({ isActive }) => (isActive ? 600 : 500)};
   transition: color 0.3s ease-in-out;
   padding: 8px 20px;
   display: flex;

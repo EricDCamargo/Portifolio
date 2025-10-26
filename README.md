@@ -1,4 +1,4 @@
-# 🧑‍💻 Portfólio - Eric Dellai Camargo Desenvolvedor Full-Stack
+# 🧑‍💻 Portfólio - Eric Dellai Camargo
 
 <div align="center">
   <img src="https://img.shields.io/badge/React-19.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19.2.0"/>

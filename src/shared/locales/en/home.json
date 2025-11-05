@@ -54,7 +54,7 @@
     "project": "Projects",
     "projectsIntro": "Here are some of the projects I've worked on, showcasing my skills in full-stack development and my passion for creating efficient and modern solutions.",
 
-    "projectOneTitle": "Pedido Fácil - Point of Sale (POS) System",
+    "projectOneTitle": "Pedido Fácil - Order and Ticket Management System",
     "projectOneDescription": "Pedido Fácil is a full-stack, cross-platform Point of Sale (POS) solution designed to digitize and optimize restaurant management, from table service to closing the bill. Its architecture is supported by a robust RESTful API in Node.js/TypeScript (using PostgreSQL/Prisma ORM) and establishes real-time communication via Socket.io to synchronize operations between the mobile application (React Native) — dedicated to table management and order placement by waiters — and the administrative web dashboard (Next.js). The system covers user and product control, log monitoring, and payment management, standing out for advanced features like Partial Payment per Order functionality and native integration with Thermal Printers, ensuring agility throughout the operational flow.",
 
     "projectTwoTitle": "SysNevent - Event Platform",

@@ -54,7 +54,7 @@
     "project": "Projetos",
     "projectsIntro": "Aqui estão alguns dos projetos em que trabalhei, demonstrando minhas habilidades em desenvolvimento full-stack e minha paixão por criar soluções eficientes e modernas.",
 
-    "projectOneTitle": "Pedido Fácil - Sistema de Ponto de Venda (PDV)",
+    "projectOneTitle": "Pedido Fácil - Sistema de Gestão de Pedidos e Comandas",
     "projectOneDescription": "O Pedido Fácil é uma solução full-stack e multiplataforma, desenvolvida para digitalizar e otimizar a gestão de restaurantes, desde o atendimento à mesa até o fechamento da conta. Sua arquitetura é sustentada por uma API RESTful em Node.js/TypeScript (utilizando PostgreSQL/Prisma ORM) e estabelece comunicação em tempo real via Socket.io para sincronizar as operações entre o aplicativo móvel (React Native) — dedicado à gestão de mesas e lançamentos de pedidos pelos garçons — e o dashboard web administrativo (Next.js). O sistema abrange controle de usuários e produtos, acompanhamento de logs, e gerenciamento de pagamentos, destacando-se por recursos avançados como a funcionalidade de Pagamento Parcial por Pedido e a integração nativa com Impressoras Térmicas, garantindo agilidade em todo o fluxo operacional.",
 
     "projectTwoTitle": "SysNevent - Plataforma de Eventos",

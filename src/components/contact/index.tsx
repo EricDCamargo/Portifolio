@@ -17,7 +17,7 @@ const Contact = () => {
           <p className='paragraph'>{t('home:contactDesc')}</p>
         </TextContainer>
         <ContactWay>
-          <DataCard hover={wppColor} href='https://contate.me/eric-camargo' target='_blank'>
+          {/* <DataCard hover={wppColor} href='https://contate.me/eric-camargo' target='_blank'>
             <div className='iconContainer'>
               <SiWhatsapp />
             </div>
@@ -25,7 +25,7 @@ const Contact = () => {
               <h4>WhatsApp</h4>
               <p>(15) 99728-4066</p>
             </div>
-          </DataCard>
+          </DataCard> */}
           <DataCard
             hover={linkedin}
             href='https://www.linkedin.com/in/ericdellaicamargo/'

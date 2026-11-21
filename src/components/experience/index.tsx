@@ -49,6 +49,13 @@ export const Experience = () => {
                   </CardHeaderColumn>
                 </CardHeader>
                 <Description>{t(exp.description)}</Description>
+                {exp.highlights && (
+                  <Highlights>
+                    {(t(exp.highlights, { returnObjects: true }) as string[]).map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </Highlights>
+                )}
                 <SkillsTitle>{t('home:mainTechnologies')} </SkillsTitle>
                 <Skills>
                   {exp.techs.map((tech) => (
@@ -201,6 +208,33 @@ const Description = styled.p`
   margin-bottom: 1.2rem;
   color: ${colors.white};
   line-height: 1.6;
+`;
+
+const Highlights = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin: -0.4rem 0 1.4rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 1.1rem;
+    color: ${colors.white};
+    line-height: 1.6;
+  }
+
+  li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: ${colors.pink};
+  }
 `;
 
 const SkillsTitle = styled.h4`

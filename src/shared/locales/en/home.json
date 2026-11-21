@@ -31,6 +31,21 @@
     "MyNetwork": "My networks",
     "current": "Present",
 
+    "CompanyV": "Mind Group",
+    "ExperienceV": "Mid-Level Software Engineer",
+    "PeriodV": "Feb 2026 – Present",
+    "DescriptionV": "I work across the full lifecycle of web, mobile and API products for clients in education, fintech and e-commerce: from upfront technical analysis, requirements gathering and architecture design to deployment, systems integration and production support, including legacy system modernization and continuous process improvement (DevOps, CI/CD, agile management and documentation). Key deliveries:",
+    "HighlightsV": [
+      "Search engine for an institutional portal with hundreds of pages: a Playwright (headless Chromium) crawler that renders the SPA and indexes content per section, with heading-level deep links, incremental indexing, removal of inactive pages, a daily cron job, on-demand background reindexing and real-time progress over WebSocket (Socket.IO). I designed the memory management (isolated contexts, batches with browser restarts and blocking of heavy resources) so it runs reliably inside a container.",
+      "Headless CMS and admin dashboard (NestJS, Prisma and Next.js) with permission-based access control (RBAC), a dynamic form builder and lead management with asynchronous queue-based import and export (BullMQ + Redis, dedicated worker) integrated with the legacy ERP.",
+      "LLM integration in live products: an AI chatbot on the institutional website, orchestrated in n8n, for lead capture, placement tests and finding nearby units by ZIP code, plus conversational assistants with real-time responses via Server-Sent Events (SSE).",
+      "Restricted-area portal with files stored in a private S3 bucket behind a storage abstraction (short-lived signed URLs), queue-based notifications and emails, and user integration with the legacy system.",
+      "React Native/Expo apps and NestJS APIs for kids' financial education and personal finance: gamification (learning tracks, achievements, rankings and streaks), allowance and piggy bank, goals and planning, Open Finance, subscriptions and push notifications, tested with Jest/Testing Library and Maestro E2E.",
+      "Marketplace and e-commerce: payment gateway integrations via webhooks, geocoding, catalog and content moderation, with rate limiting and cooldown for external providers, plus a Turborepo monorepo with an API, a web app (PWA) and a queue worker.",
+      "Infrastructure and data: per-environment Docker Compose (staging and production), CI/CD with GitHub Actions on containerized self-hosted runners, production administration of MySQL/MariaDB, PostgreSQL and MongoDB databases (tuning, zero-downtime engine migration and history restoration) and automated daily backups to S3 with lifecycle policies.",
+      "Best practices: layered architecture (controller → service → repository), validated DTOs (class-validator/Zod), OpenAPI/Swagger documentation, unit and E2E testing (Jest, Vitest, Playwright), Conventional Commits and code review through pull requests."
+    ],
+
     "CompanyI": "Freelance Developer",
     "ExperienceI": "Full-Stack Developer",
     "PeriodI": "May 2025 – Present",

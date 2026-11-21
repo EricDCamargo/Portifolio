@@ -1,9 +1,40 @@
 import { SVGs } from '@src/assets';
 import { ExperienceProps } from '../types';
 
-const { freelancer, diebold, epiousion, pts } = SVGs;
+const { freelancer, diebold, epiousion, pts, mindGroup } = SVGs;
 
 export const ExperiencesData: ExperienceProps[] = [
+  {
+    id: 6,
+    company: 'home:CompanyV',
+    ocupation: 'home:ExperienceV',
+    logo: mindGroup,
+    period: 'home:PeriodV',
+    location: 'Sorocaba, SP',
+    type: 'home:remote',
+    description: 'home:DescriptionV',
+    highlights: 'home:HighlightsV',
+    techs: [
+      'NestJS',
+      'TypeScript',
+      'NextJs',
+      'React',
+      'ReactNative',
+      'PrismaORM',
+      'MySQL',
+      'PostgreSQL',
+      'MongoDB',
+      'Redis',
+      'BullMQ',
+      'Socketio',
+      'AmazonS3',
+      'Docker',
+      'GitHubActions',
+      'Playwright',
+      'LLM',
+      'n8n',
+    ],
+  },
   {
     id: 1,
     company: 'home:CompanyI',

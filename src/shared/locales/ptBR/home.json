@@ -31,6 +31,21 @@
     "MyNetwork": "Minhas redes",
     "current": "Atual",
 
+    "CompanyV": "Mind Group",
+    "ExperienceV": "Engenheiro de Software Pleno",
+    "PeriodV": "Fev 2026 – Atual",
+    "DescriptionV": "Atuo no ciclo completo de produtos web, mobile e APIs para clientes de educação, fintech e e-commerce: da análise técnica prévia, levantamento de requisitos e definição de arquitetura ao deploy, integração de sistemas e suporte em produção, incluindo a modernização de sistemas legados e a melhoria contínua de processos (DevOps, CI/CD, gestão ágil e documentação). Principais entregas:",
+    "HighlightsV": [
+      "Motor de busca de um portal institucional com centenas de páginas: crawler com Playwright (Chromium headless) que renderiza a SPA e indexa o conteúdo por seção, com deep link por heading, indexação incremental, remoção de páginas inativas, cron diário, reindexação sob demanda em background e progresso em tempo real via WebSocket (Socket.IO). Projetei o gerenciamento de memória (contextos isolados, lotes com reinício do navegador e bloqueio de recursos pesados) para rodar de forma estável em container.",
+      "CMS headless e painel administrativo (NestJS, Prisma e Next.js) com controle de acesso por permissões (RBAC), form builder dinâmico e gestão de leads com importação e exportação assíncronas em filas (BullMQ + Redis, worker dedicado) e integração com o ERP legado.",
+      "Integração de LLMs em produtos ativos: chatbot com IA no site institucional, orquestrado em n8n, para captação de leads, teste de nivelamento e busca de unidades por CEP, e assistentes conversacionais com respostas em tempo real via Server-Sent Events (SSE).",
+      "Portal de área restrita com arquivos em bucket S3 privado atrás de uma abstração de storage (signed URLs com TTL curto), notificações e e-mails assíncronos em fila e integração de usuários com o sistema legado.",
+      "Apps React Native/Expo e APIs NestJS para educação financeira infantil e finanças pessoais: gamificação (trilhas, conquistas, ranking e sequências), mesada e cofrinho, metas e planejamento, Open Finance, assinaturas e notificações push, com testes em Jest/Testing Library e E2E com Maestro.",
+      "Marketplace e e-commerce: integrações com gateways de pagamento via webhooks, geocodificação, catálogo e moderação de conteúdo, com rate limiting e cooldown de provedores externos, além de monorepo Turborepo com API, web (PWA) e worker de filas.",
+      "Infraestrutura e dados: Docker Compose por ambiente (homologação e produção), CI/CD com GitHub Actions em runners self-hosted containerizados, administração de bancos MySQL/MariaDB, PostgreSQL e MongoDB em produção (tuning, migração de motor sem downtime e restauração de históricos) e backups diários automatizados para S3 com políticas de ciclo de vida.",
+      "Boas práticas: arquitetura em camadas (controller → service → repository), DTOs validados (class-validator/Zod), documentação OpenAPI/Swagger, testes unitários e E2E (Jest, Vitest, Playwright), Conventional Commits e code review via pull requests."
+    ],
+
     "CompanyI": "Desenvolvedor Autônomo",
     "ExperienceI": "Desenvolvedor Full-Stack",
     "PeriodI": "Mai 2025 – Atual",

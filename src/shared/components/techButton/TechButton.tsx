@@ -4,7 +4,8 @@ import { colors } from '@src/shared/themes/colors';
 import { DiJavascript, DiMysql, DiScrum } from 'react-icons/di';
 import { BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
 import { BiMobile } from 'react-icons/bi';
-import { RiComputerFill } from 'react-icons/ri';
+import { RiComputerFill, RiRobot2Fill } from 'react-icons/ri';
+import { MdAccountTree, MdQueue, MdStream } from 'react-icons/md';
 import {
   FaAws,
   FaBootstrap,
@@ -21,6 +22,7 @@ import {
   FaSass,
   FaServer,
   FaCloud,
+  FaTheaterMasks,
 } from 'react-icons/fa';
 
 import {
@@ -41,6 +43,12 @@ import {
   SiSocketdotio,
   SiWebpack,
   SiWordpress,
+  SiMongodb,
+  SiAmazons3,
+  SiNestjs,
+  SiRedis,
+  SiGithubactions,
+  SiJest,
 } from 'react-icons/si';
 
 export type NameTechs =
@@ -51,6 +59,7 @@ export type NameTechs =
   | 'NextJs'
   | 'ReactNative'
   | 'NodeJs'
+  | 'NestJS'
   | 'Express'
   | 'JWT'
   | 'ReactHookForm'
@@ -60,6 +69,9 @@ export type NameTechs =
   | 'SQL'
   | 'PostgreSQL'
   | 'MySQL'
+  | 'MongoDB'
+  | 'Redis'
+  | 'BullMQ'
   | 'Firebase'
   | 'Docker'
   | 'DockerCompose'
@@ -71,6 +83,13 @@ export type NameTechs =
   | 'Figma'
   | 'Scrum'
   | 'AWS'
+  | 'AmazonS3'
+  | 'LLM'
+  | 'SSE'
+  | 'GitHubActions'
+  | 'Jest'
+  | 'Playwright'
+  | 'n8n'
   | 'RabbitMQ'
   | 'Git'
   | 'RESTfulAPI'
@@ -101,6 +120,7 @@ const TechsIcons: TechsIconsProps = {
   NextJs: <SiNextdotjs />,
   ReactNative: <BiMobile />,
   NodeJs: <FaNodeJs />,
+  NestJS: <SiNestjs />,
   Express: <SiExpress />,
   JWT: <SiJsonwebtokens />,
   ReactHookForm: <SiReacthookform />,
@@ -110,6 +130,9 @@ const TechsIcons: TechsIconsProps = {
   SQL: <BsDatabaseFill />,
   PostgreSQL: <SiPostgresql />,
   MySQL: <DiMysql />,
+  MongoDB: <SiMongodb />,
+  Redis: <SiRedis />,
+  BullMQ: <MdQueue />,
   Firebase: <SiFirebase />,
   Docker: <FaDocker />,
   DockerCompose: <FaDocker />,
@@ -130,6 +153,13 @@ const TechsIcons: TechsIconsProps = {
   Jira: <FaJira />,
   Bitbucket: <FaBitbucket />,
   AWS: <FaAws />,
+  AmazonS3: <SiAmazons3 />,
+  LLM: <RiRobot2Fill />,
+  SSE: <MdStream />,
+  GitHubActions: <SiGithubactions />,
+  Jest: <SiJest />,
+  Playwright: <FaTheaterMasks />,
+  n8n: <MdAccountTree />,
   Bootstrap: <FaBootstrap />,
   Figma: <FaFigma />,
   Hardware: <BsMotherboard />,

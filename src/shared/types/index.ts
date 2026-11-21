@@ -9,6 +9,7 @@ export interface ExperienceProps {
   location: string;
   type?: string;
   description: string;
+  highlights?: string;
   techs: NameTechs[];
 }
 

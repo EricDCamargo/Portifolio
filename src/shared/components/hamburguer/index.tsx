@@ -4,7 +4,8 @@ import { colors } from '@src/shared/themes/colors';
 import { changeAppLanguage, handleGmailIconClick, smoothScroll } from '@src/shared/utils/functions';
 import { Dispatch, SetStateAction } from 'react';
 import { useTranslation } from 'react-i18next';
-import { SiGmail, SiLinkedin, SiWhatsapp } from 'react-icons/si';
+import { SiGmail, SiWhatsapp } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 
 interface Props {
@@ -37,7 +38,7 @@ export const Hamburguer = ({ setIsMenuOpen }: Props) => {
           <SiWhatsapp size={18} className='icon iconWpp' />
         </a>
         <a href='https://www.linkedin.com/in/ericdellaicamargo/' target='_blank'>
-          <SiLinkedin size={18} className='icon iconLinkedin' />
+          <FaLinkedin size={18} className='icon iconLinkedin' />
         </a>
         <SiGmail size={18} className='icon iconGmail' href={handleGmailIconClick} />
       </Icons>

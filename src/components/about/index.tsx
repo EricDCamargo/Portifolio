@@ -1,7 +1,7 @@
 import { SVGs } from '@src/assets';
 import { colors } from '@src/shared/themes/colors';
 import { styled } from 'styled-components';
-import Lottie, { Options } from 'react-lottie';
+import LottieModule, { Options } from 'react-lottie';
 import { useTranslation } from 'react-i18next';
 import { ageCalc } from '@src/shared/utils/functions';
 
@@ -14,6 +14,11 @@ import {
   SiDocker,
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
+
+// react-lottie is CommonJS; Vite 8 (Rolldown) imports it Node-style, so the
+// default import can be the module object instead of the component itself.
+const Lottie =
+  (LottieModule as unknown as { default?: typeof LottieModule }).default ?? LottieModule;
 
 interface Tool {
   name: string;

@@ -1,7 +1,8 @@
 import { colors } from '@src/shared/themes/colors';
 import { handleGmailIconClick } from '@src/shared/utils/functions';
 import { useTranslation } from 'react-i18next';
-import { SiGmail, SiInstagram, SiLinkedin, SiWhatsapp } from 'react-icons/si';
+import { SiGmail, SiInstagram, SiWhatsapp } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 import styled from 'styled-components';
 
 const Contact = () => {
@@ -32,7 +33,7 @@ const Contact = () => {
             target='_blank'
           >
             <div className='iconContainer'>
-              <SiLinkedin />
+              <FaLinkedin />
             </div>
             <div>
               <h4>LinkedIn</h4>

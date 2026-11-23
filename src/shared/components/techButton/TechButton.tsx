@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors } from '@src/shared/themes/colors';
 import { DiJavascript, DiMysql, DiScrum } from 'react-icons/di';
-import { BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
+import { BsBucketFill, BsDatabaseFill, BsMotherboard } from 'react-icons/bs';
 import { BiMobile } from 'react-icons/bi';
 import { RiComputerFill, RiRobot2Fill } from 'react-icons/ri';
 import { MdAccountTree, MdQueue, MdStream } from 'react-icons/md';
@@ -44,7 +44,6 @@ import {
   SiWebpack,
   SiWordpress,
   SiMongodb,
-  SiAmazons3,
   SiNestjs,
   SiRedis,
   SiGithubactions,
@@ -153,7 +152,7 @@ const TechsIcons: TechsIconsProps = {
   Jira: <FaJira />,
   Bitbucket: <FaBitbucket />,
   AWS: <FaAws />,
-  AmazonS3: <SiAmazons3 />,
+  AmazonS3: <BsBucketFill />,
   LLM: <RiRobot2Fill />,
   SSE: <MdStream />,
   GitHubActions: <SiGithubactions />,
